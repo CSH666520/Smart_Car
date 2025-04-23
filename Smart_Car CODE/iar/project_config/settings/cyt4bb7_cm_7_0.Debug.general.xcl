@@ -1,0 +1,21 @@
+"C:\iar1\arm\bin\armPROC.dll" 
+
+"C:\iar1\arm\bin\armJET.dll" 
+
+"C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car CODE\iar\project_config\..\Debug_m7_0\Exe\cyt4bb7_cm_7_0.out" 
+
+--plugin="C:\iar1\arm\bin\armbat.dll" 
+
+--device_macro="C:\iar1\arm/config/debugger/Infineon/CYT4BB_M7.dmac" 
+
+--device_macro="C:\iar1\arm/config/debugger/Infineon/CYTVII_M7.dmac" 
+
+--device_macro="C:\iar1\arm/config/debugger/Infineon/CYTVII_Trace.dmac" 
+
+--device_macro="C:\iar1\arm/config/debugger/Infineon/CYTVII_Common.dmac" 
+
+--flash_loader="C:\iar1\arm/config/flashloader/Infineon/FlashCYT4_CF4M_WF256K.board" 
+
+
+
+
