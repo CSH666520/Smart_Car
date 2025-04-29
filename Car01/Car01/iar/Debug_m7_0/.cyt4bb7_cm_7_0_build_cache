@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>C:\Users\jty\Desktop\CYT4BB7_Library-master\CYT4BB7_Library-master\Example\Coreboard_Demo\Car01\iar\Debug_m7_0\Exe\cyt4bb7_cm_7_0.out</Path>
+            <Output>
+                <Path>C:\Users\jty\Desktop\CYT4BB7_Library-master\CYT4BB7_Library-master\Example\Coreboard_Demo\Car01\iar\Debug_m7_0\List\cyt4bb7_cm_7_0.map</Path>
+            </Output>
+        </Parent>
+        <Parent>
+            <Path>C:\Users\jty\Desktop\CYT4BB7_Library-master\CYT4BB7_Library-master\Example\Coreboard_Demo\E05_pit_demo\iar\Debug_m7_0\Exe\cyt4bb7_cm_7_0.out</Path>
+            <Output>
+                <Path>C:\Users\jty\Desktop\CYT4BB7_Library-master\CYT4BB7_Library-master\Example\Coreboard_Demo\E05_pit_demo\iar\Debug_m7_0\List\cyt4bb7_cm_7_0.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>
