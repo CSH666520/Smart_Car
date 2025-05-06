@@ -60,7 +60,11 @@
 // **************************** 代码区域 ****************************
 
 
- int main(void)
+extern int16 l_line_x[LCDH], r_line_x[LCDH]; 
+extern int16 l_line_x_l[LCDH], r_line_x_l[LCDH];
+int i;
+
+int main()
 {
     clock_init(SYSTEM_CLOCK_250M); 	// 时钟配置及系统初始化<务必保留>
     debug_init();                          // 调试串口信息初始化
@@ -69,7 +73,7 @@
     tft180_set_dir(TFT180_CROSSWISE);                                           // 需要先横屏 不然显示不下
     tft180_init();
     mt9v03x_init();
-    
+//    int i=0;
 //    ips114_init();
 //    mt9v03x_init();
     
@@ -94,9 +98,28 @@
             Get_Use_Image();
             Get_Bin_Image(0);
             Bin_Image_Filter();
-            tft180_displayimage03x((const uint8 *)image_01, 80, 64);
+            dou_Longest_White_Column();
+            tft180_displayimage03x((const uint8 *)image_01, 94, 60);
         }
-      
+
+            for( i=0;i<58;i++)
+            {  
+              tft180_draw_point(r_line_x_l[i],i,RGB565_BLUE);
+              tft180_draw_point(r_line_x_l[i-1],i,RGB565_BLUE);
+               tft180_draw_point(l_line_x_l[i],i,RGB565_BLUE);
+               tft180_draw_point(l_line_x_l[i+1],i,RGB565_BLUE);
+               tft180_draw_point((l_line_x_l[i] + r_line_x_l[i])/2,i,RGB565_PINK); 
+               
+                if(i>=58)
+                {
+                   i=0;
+                   break;
+                 }
+             }       
+         tft180_show_uint(100, 80,  longest_White_Column_site, 6);
+//         tft180_show_uint(54, 40,  l_line_x[47],3);
+//         tft180_show_uint(57, 40,  l_line_x[56],3);
+//         tft180_show_uint(60, 40,  l_line_x[46],3);
         // 此处编写需要循环执行的代码
     }
 }
