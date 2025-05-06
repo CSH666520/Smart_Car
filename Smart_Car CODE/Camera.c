@@ -608,7 +608,7 @@ void  Element_Judge(void)
      int16 top, bottom, left, right;
      int16 row, column;
      
-    for (top = 0; top < 10 ; top++)//从左到右扫顶部10行
+    for (top = 10; top < 20 ; top++)//从左到右扫顶部0-10行
     {
         for (column = 0; column < LCDW - 1; column++)
         {
@@ -622,7 +622,7 @@ void  Element_Judge(void)
              }
         }
     }
-   for (bottom = 0; bottom < 10; bottom++)//从左到右扫底部10行
+   for (bottom = 59; bottom > 49 ; bottom--)//从左到右扫底部50-60行
     {
         for (column = 0; column < LCDW - 1; column++)
         {
@@ -636,7 +636,7 @@ void  Element_Judge(void)
              }
         }
     }
-    for (left = 0; left < 10; left++)//从下到上扫左边10行
+    for (left = 10; left < 20; left++)//从下到上扫左边0-10行
     {
         for (row = LCDH - 1; column > 0; column--)
         {
@@ -650,7 +650,7 @@ void  Element_Judge(void)
              }
         }
     }   
-    for (right = 93; right > 83; right--)//从下到上扫右边10行
+    for (right = 83; right > 73; right--)//从下到上扫右边50-60行
     {
         for (row = LCDH - 1; column > 0; column--)
         {
