@@ -31,6 +31,14 @@ int16 l_line_x[LCDH], r_line_x[LCDH], m_line_x[LCDH];        //´¢´æÔ­Ê¼Í¼ÏñµÄ×óÓ
 int16 l_line_x_l[LCDH], r_line_x_l[LCDH], m_line_x_l[LCDH];  //´¢´æÔ­Ê¼Í¼ÏñµÄ×óÓÒ±ß½çµÄÁĞÊı£¬ÓÃÓÚÆ«²î¼ÆËã
 int search_line_end = 5;//²»ÄÜÎªÁã£¬Ô­ÒòÔİÎ´²é
 
+/**********ÔªËØ´¦Àí½á¹¹Ìå**********/
+struct YUAN_SU road_type = {     
+      .barrier                       = 0,         //ºá¶Ï
+      .straight                      = 0,         //Ö±µÀ
+      .right_angle_bend              = 0,         //Ö±½ÇÍäµÀ
+      .ten                           = 0,         //Ê®×Ö
+};
+
 /*************************************************************************
  *  º¯ÊıÃû³Æ£ºshort GetOSTU (unsigned char tmImage[LCDH][LCDW])
  *  ¹¦ÄÜËµÃ÷£º´ó½ò·¨ÇóãĞÖµ´óĞ¡
@@ -600,11 +608,9 @@ void dou_Longest_White_Column(void)//×î³¤°×ÁĞÑ²Ïß
 ÔªËØÅĞ¶Ï
 *************************************************************************/
 int16 top_junp_change_sign_num, bottom_junp_change_sign_num, left_junp_change_sign_num, right_junp_change_sign_num;//ÓÃÓÚ¼ÇÂ¼ÉÏÏÂ×óÓÒºÚ°×Ìø±äÊıÁ¿
-int right_right_angle_flag, left_right_angle_flag; //ÅĞ¶Ï×óÓÒÖ±½Ç±äÁ¿
-int ten_sign;//ÅĞ¶ÏÊ®×Ö±äÁ¿
 void  Element_Judge(void)
 {
-//     int16 right_angle_white_column, left_angle_white_column;//Ö±½Ç°×ÁĞÅĞ¶Ï±äÁ¿
+//     int16 right_angle_white_column, left_angle_white_column;//Ö±½Ç°×ÁĞÅĞ¶Ï±äÁ¿  
      int16 top, bottom, left, right;
      int16 row, column;
      
@@ -664,16 +670,16 @@ void  Element_Judge(void)
              }
         }
     }
-    if(top_junp_change_sign_num <= 0 && bottom_junp_change_sign_num >= 2 && left_junp_change_sign_num <= 0 && right_junp_change_sign_num >= 2)//ÓÒÖ±½Ç
+    if(top_junp_change_sign_num <= 0 && bottom_junp_change_sign_num >= 2 && left_junp_change_sign_num <= 0 && right_junp_change_sign_num >= 2 && longest_White_Column<=45)//ÓÒÖ±½Ç
     {
-        right_right_angle_flag=1;
+        road_type.right_angle_bend = 1;
     }
-    if(top_junp_change_sign_num <= 0 && bottom_junp_change_sign_num >= 2 && left_junp_change_sign_num >= 2 && right_junp_change_sign_num <= 0)//ÓÒÖ±½Ç
+    if(top_junp_change_sign_num <= 0 && bottom_junp_change_sign_num >= 2 && left_junp_change_sign_num >= 2 && right_junp_change_sign_num <= 0 && longest_White_Column<=45)//ÓÒÖ±½Ç
     {
-        left_right_angle_flag=1;
+        road_type.right_angle_bend = 1;
     }
     if(top_junp_change_sign_num >= 2 && bottom_junp_change_sign_num >= 2 && left_junp_change_sign_num >= 2 && right_junp_change_sign_num >= 2)//Ê®×Ö
     {
-        ten_sign=1;
+        road_type.ten = 1;
     }
 }
