@@ -294,21 +294,6 @@
     "scope": null
   },
   {
-    "ID": "c:@S@YUAN_SU",
-    "What": "Struct",
-    "defdec": "Dec",
-    "display": "YUAN_SU",
-    "location": {
-      "column": "8",
-      "line": "35",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\Camera.c"
-    },
-    "members": [],
-    "name": "YUAN_SU",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@road_type",
     "What": "Variable",
     "defdec": "Dec",
@@ -925,13 +910,85 @@
     "scope": null
   },
   {
+    "ID": "c:@S@YUAN_SU",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "YUAN_SU",
+    "location": {
+      "column": "8",
+      "line": "14",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "members": [
+      {
+        "ID": "c:@S@YUAN_SU@FI@barrier",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "barrier",
+        "location": {
+          "column": "12",
+          "line": "15",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "barrier",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      },
+      {
+        "ID": "c:@S@YUAN_SU@FI@straight",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "straight",
+        "location": {
+          "column": "12",
+          "line": "16",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "straight",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      },
+      {
+        "ID": "c:@S@YUAN_SU@FI@right_angle_bend",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "right_angle_bend",
+        "location": {
+          "column": "12",
+          "line": "17",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "right_angle_bend",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      },
+      {
+        "ID": "c:@S@YUAN_SU@FI@ten",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "ten",
+        "location": {
+          "column": "12",
+          "line": "18",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "ten",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      }
+    ],
+    "name": "YUAN_SU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@mt9v03x_image",
     "What": "Variable",
     "defdec": "Dec",
     "display": "mt9v03x_image",
     "location": {
       "column": "17",
-      "line": "13",
+      "line": "21",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "mt9v03x_image",
@@ -945,7 +1002,7 @@
     "display": "Image_Use",
     "location": {
       "column": "22",
-      "line": "14",
+      "line": "22",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Image_Use",
@@ -959,7 +1016,7 @@
     "display": "Bin_Image",
     "location": {
       "column": "22",
-      "line": "15",
+      "line": "23",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Bin_Image",
@@ -973,7 +1030,7 @@
     "display": "image_01",
     "location": {
       "column": "14",
-      "line": "16",
+      "line": "24",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "image_01",
@@ -981,13 +1038,153 @@
     "scope": null
   },
   {
+    "ID": "c:@Longest_White_Column_Left_site",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Longest_White_Column_Left_site",
+    "location": {
+      "column": "14",
+      "line": "26",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Longest_White_Column_Left_site",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Longest_White_Column_Left",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Longest_White_Column_Left",
+    "location": {
+      "column": "12",
+      "line": "27",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Longest_White_Column_Left",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Longest_White_Column_Right",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Longest_White_Column_Right",
+    "location": {
+      "column": "38",
+      "line": "27",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Longest_White_Column_Right",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@l_search_flag",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "l_search_flag",
+    "location": {
+      "column": "14",
+      "line": "29",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "l_search_flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Boundry_Start_Right",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Boundry_Start_Right",
+    "location": {
+      "column": "12",
+      "line": "30",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Boundry_Start_Right",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Boundry_Start_Left",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Boundry_Start_Left",
+    "location": {
+      "column": "32",
+      "line": "30",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Boundry_Start_Left",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Both_Lost_Time",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Both_Lost_Time",
+    "location": {
+      "column": "12",
+      "line": "31",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Both_Lost_Time",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Right_Lost_Flag",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Right_Lost_Flag",
+    "location": {
+      "column": "14",
+      "line": "32",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Right_Lost_Flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@l_line_x",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "l_line_x",
+    "location": {
+      "column": "14",
+      "line": "33",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "l_line_x",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@l_line_x_l",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "l_line_x_l",
+    "location": {
+      "column": "14",
+      "line": "34",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "l_line_x_l",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@GetOSTU",
     "What": "Function",
     "defdec": "Dec",
     "display": "short GetOSTU(unsigned char (*)[94])",
     "location": {
       "column": "7",
-      "line": "18",
+      "line": "37",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "GetOSTU",
@@ -1001,7 +1198,7 @@
     "display": "short GetOSTU(unsigned char (*)[94])",
     "location": {
       "column": "7",
-      "line": "18",
+      "line": "37",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "GetOSTU",
@@ -1015,7 +1212,7 @@
     "display": "void Get_Bin_Image(unsigned char)",
     "location": {
       "column": "6",
-      "line": "19",
+      "line": "38",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Get_Bin_Image",
@@ -1029,7 +1226,7 @@
     "display": "void Get_Bin_Image(unsigned char)",
     "location": {
       "column": "6",
-      "line": "19",
+      "line": "38",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Get_Bin_Image",
@@ -1043,7 +1240,7 @@
     "display": "void Bin_Image_Filter(void)",
     "location": {
       "column": "6",
-      "line": "20",
+      "line": "39",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Bin_Image_Filter",
@@ -1057,7 +1254,7 @@
     "display": "void Bin_Image_Filter(void)",
     "location": {
       "column": "6",
-      "line": "20",
+      "line": "39",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Bin_Image_Filter",
@@ -1071,7 +1268,7 @@
     "display": "void Get_Use_Image(void)",
     "location": {
       "column": "6",
-      "line": "21",
+      "line": "40",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Get_Use_Image",
@@ -1085,7 +1282,7 @@
     "display": "void Get_Use_Image(void)",
     "location": {
       "column": "6",
-      "line": "21",
+      "line": "40",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Get_Use_Image",
@@ -1099,7 +1296,7 @@
     "display": "void Camera_All_Deal(void)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "41",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Camera_All_Deal",
@@ -1113,10 +1310,80 @@
     "display": "void Camera_All_Deal(void)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "41",
       "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
     },
     "name": "Camera_All_Deal",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Search_Left_and_Right_Lines",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Search_Left_and_Right_Lines(int (*)[94], int, int, int)",
+    "location": {
+      "column": "6",
+      "line": "42",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Search_Left_and_Right_Lines",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Search_Bottom_Line_OTSU",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Search_Bottom_Line_OTSU(int (*)[94], int, int, int)",
+    "location": {
+      "column": "6",
+      "line": "43",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Search_Bottom_Line_OTSU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Search_Border_OTSU",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Search_Border_OTSU(int (*)[94], int, int, int)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Search_Border_OTSU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@dou_Longest_White_Column",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void dou_Longest_White_Column(void)",
+    "location": {
+      "column": "6",
+      "line": "45",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "dou_Longest_White_Column",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@dou_Longest_White_Column",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void dou_Longest_White_Column(void)",
+    "location": {
+      "column": "6",
+      "line": "45",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "dou_Longest_White_Column",
     "origin": "user_include",
     "scope": null
   },

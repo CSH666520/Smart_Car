@@ -114,7 +114,7 @@ int main()
                 {
                    i=0;
                    break;
-                 }
+                }
              }       
          tft180_show_uint(100, 80,  longest_White_Column_site, 6);
 //         tft180_show_uint(54, 40,  l_line_x[47],3);
