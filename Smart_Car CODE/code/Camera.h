@@ -14,9 +14,12 @@
 struct YUAN_SU{
      int16 barrier;                            //横断
      int16 straight;                           //直道
-     int16 right_angle_bend;                   //直角弯道
+     int16 right_right_angle_bend;             //右直角弯道
      int16 ten;                                //十字 
+     int16 left_right_angle_bend;             //左直角弯道
+
 };
+extern struct YUAN_SU road_type;
 
 extern uint8    mt9v03x_image[MT9V034_IMAGEH][MT9V034_IMAGEW];
 extern unsigned char Image_Use[LCDH][LCDW];
@@ -43,7 +46,7 @@ void Search_Left_and_Right_Lines(uint8 imageInput[LCDH][LCDW], int Row, int Col,
 void Search_Bottom_Line_OTSU(uint8 imageInput[LCDH][LCDW], uint8 Row, uint8 Col, uint8 Bottonline);
 void Search_Border_OTSU(uint8 imageInput[LCDH][LCDW], uint8 Row, uint8 Col, uint8 Bottonline);
 void dou_Longest_White_Column(void);//最长白列巡线
-
+void  Element_Judge(void);
 
 
 #endif

@@ -1122,6 +1122,18 @@
             <name>$PROJ_DIR$\..\..\code\Camera.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\..\code\get_angle.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\code\get_angle.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\code\motor.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\code\motor.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\code\本文件夹作用.txt</name>
         </file>
     </group>

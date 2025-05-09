@@ -35,8 +35,10 @@ int search_line_end = 5;//不能为零，原因暂未查
 struct YUAN_SU road_type = {     
       .barrier                       = 0,         //横断
       .straight                      = 0,         //直道
-      .right_angle_bend              = 0,         //直角弯道
+      .right_right_angle_bend        = 0,         //右直角弯道
       .ten                           = 0,         //十字
+      .left_right_angle_bend         = 0,         //左直角弯道
+      
 };
 
 /*************************************************************************
@@ -614,6 +616,11 @@ void  Element_Judge(void)
      int16 top, bottom, left, right;
      int16 row, column;
      
+     top_junp_change_sign_num = 0;
+     bottom_junp_change_sign_num = 0;
+     left_junp_change_sign_num = 0;
+     right_junp_change_sign_num = 0;
+     
     for (top = 10; top < 20 ; top++)//从左到右扫顶部10-20行
     {
         for (column = 0; column < LCDW - 1; column++)
@@ -644,7 +651,7 @@ void  Element_Judge(void)
     }
     for (left = 10; left < 20; left++)//从下到上扫左边第10-20行
     {
-        for (row = LCDH - 1; column > 0; column--)
+        for (row = LCDH - 1; row > 0; row--)
         {
              if (image_01[row-1][left] != 0x00 && image_01[row][left] == 0x00 && image_01[row+1][left] == 0x00)//黑白白
              {
@@ -658,7 +665,7 @@ void  Element_Judge(void)
     }   
     for (right = 83; right > 73; right--)//从下到上扫右边第74-84行
     {
-        for (row = LCDH - 1; column > 0; column--)
+        for (row = LCDH - 1; row > 0; row--)
         {
              if (image_01[row-1][right] != 0x00 && image_01[row][right] == 0x00 && image_01[row+1][right] == 0x00)//黑白白
              {
@@ -670,16 +677,36 @@ void  Element_Judge(void)
              }
         }
     }
-    if(top_junp_change_sign_num <= 0 && bottom_junp_change_sign_num >= 2 && left_junp_change_sign_num <= 0 && right_junp_change_sign_num >= 2 && longest_White_Column<=45)//右直角
+    if(top_junp_change_sign_num >= 12 && bottom_junp_change_sign_num >= 12 && left_junp_change_sign_num < 12 && right_junp_change_sign_num <  12 && longest_White_Column >= 50)//直道
     {
-        road_type.right_angle_bend = 1;
+        road_type.straight = 1;
     }
-    if(top_junp_change_sign_num <= 0 && bottom_junp_change_sign_num >= 2 && left_junp_change_sign_num >= 2 && right_junp_change_sign_num <= 0 && longest_White_Column<=45)//右直角
+    else
     {
-        road_type.right_angle_bend = 1;
+        road_type.straight = 0;
     }
-    if(top_junp_change_sign_num >= 2 && bottom_junp_change_sign_num >= 2 && left_junp_change_sign_num >= 2 && right_junp_change_sign_num >= 2)//十字
+    if(top_junp_change_sign_num < 12 && bottom_junp_change_sign_num >= 12 && left_junp_change_sign_num < 12 && right_junp_change_sign_num >= 12 && longest_White_Column <= 45)//右直角
+    {
+        road_type.right_right_angle_bend = 1;
+    }
+    else
+    {
+        road_type.right_right_angle_bend = 0;
+    }
+    if(top_junp_change_sign_num < 12 && bottom_junp_change_sign_num >= 12 && left_junp_change_sign_num >= 12 && right_junp_change_sign_num < 12 && longest_White_Column <= 45)//左直角
+    {
+        road_type.left_right_angle_bend = 1;
+    }
+    else
+    {
+        road_type.left_right_angle_bend = 0;
+    }
+    if(top_junp_change_sign_num >= 16 && bottom_junp_change_sign_num >= 16 && left_junp_change_sign_num >= 16 && right_junp_change_sign_num >= 16 && longest_White_Column >= 50)//十字
     {
         road_type.ten = 1;
+    }
+    else
+    {
+        road_type.ten = 0;
     }
 }

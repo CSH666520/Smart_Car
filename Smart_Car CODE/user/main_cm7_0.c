@@ -34,6 +34,9 @@
 ********************************************************************************************************************/
 #include "Camera.h"
 #include "zf_common_headfile.h"
+#include "get_angle.h"
+#include "motor.h"
+#include "Camera.h"
 // 打开新的工程或者工程移动了位置务必执行以下操作
 // 第一步 关闭上面所有打开的文件
 // 第二步 project->clean  等待下方进度条走完
@@ -59,10 +62,14 @@
 
 // **************************** 代码区域 ****************************
 
+#define PIT_NUM                          (PIT_CH0 )                             // 使用的周期中断编号
+#define PIT1                             (PIT_CH1 )                             // 使用的周期中断编号
 
+extern int16 top_junp_change_sign_num, bottom_junp_change_sign_num, left_junp_change_sign_num, right_junp_change_sign_num;
 extern int16 l_line_x[LCDH], r_line_x[LCDH]; 
 extern int16 l_line_x_l[LCDH], r_line_x_l[LCDH];
 int i;
+extern struct YUAN_SU road_type;
 
 int main()
 {
@@ -70,27 +77,31 @@ int main()
     debug_init();                          // 调试串口信息初始化
     
     // 此处编写用户代码 例如外设初始化代码等
+    
+    gpio_init(DIR1, GPO, GPIO_HIGH, GPO_PUSH_PULL);                             // GPIO 初始化为输出 默认上拉输出高
+    gpio_init(DIR2, GPO, GPIO_HIGH, GPO_PUSH_PULL);                             // GPIO 初始化为输出 默认上拉输出高
+    pwm_init(PWM1, 17000, 0);                                                   // PWM 通道初始化频率 17KHz 占空比初始为 0
+    pwm_init(PWM2, 17000, 0);                                                   // PWM 通道初始化频率 17KHz 占空比初始为 0
+    
+    encoder_dir_init(ENCODER_DIR1, ENCODER_DIR_PULSE1, ENCODER_DIR_DIR1);       // 初始化编码器模块与引脚 带方向增量编码器模式
+    encoder_dir_init(ENCODER_DIR2, ENCODER_DIR_PULSE2, ENCODER_DIR_DIR2);       // 初始化编码器模块与引脚 带方向增量编码器模式
+    encoder_dir_init(ENCODER_DIR3, ENCODER_DIR_PULSE3, ENCODER_DIR_DIR3);       // 初始化编码器模块与引脚 带方向增量编码器模式
+    encoder_dir_init(ENCODER_DIR4, ENCODER_DIR_PULSE4, ENCODER_DIR_DIR4);       // 初始化编码器模块与引脚 带方向增量编码器模式
+    
     tft180_set_dir(TFT180_CROSSWISE);                                           // 需要先横屏 不然显示不下
     tft180_init();
     mt9v03x_init();
-//    int i=0;
-//    ips114_init();
-//    mt9v03x_init();
+    
+    imu660ra_init();
+    IMU_Offset_Init(IMU660RA);
+
+    pit_ms_init(PIT_NUM, 10);      // 初始化 CCU6_0_CH0 为周期中断 10ms 周期 
+    pit_ms_init(PIT1, 10);      // 初始化 CCU6_0_CH0 为周期中断 10ms 周期
     
     // 此处编写用户代码 例如外设初始化代码等
     while(true)
     {
         // 此处编写需要循环执行的代码
-
-//          if(mt9v03x_finish_flag)
-//          {
-//              mt9v03x_finish_flag = 0;
-//              Get_Use_Image();
-//              Get_Bin_Image(0);
-//              Bin_Image_Filter();
-//              //ips114_displayimage03x((const uint8 *)image_01, MT9V03X_W, MT9V03X_H);
-//              ips114_displayimage03x((const uint8 *)image_01, LCDW, LCDW);
-//          }
 
        if(mt9v03x_finish_flag)
         {
@@ -100,6 +111,7 @@ int main()
             Bin_Image_Filter();
             dou_Longest_White_Column();
             tft180_displayimage03x((const uint8 *)image_01, 94, 60);
+            Element_Judge();
         }
 
             for( i=0;i<58;i++)
@@ -116,12 +128,38 @@ int main()
                    break;
                 }
              }       
-         tft180_show_uint(100, 80,  longest_White_Column_site, 6);
-//         tft180_show_uint(54, 40,  l_line_x[47],3);
-//         tft180_show_uint(57, 40,  l_line_x[56],3);
-//         tft180_show_uint(60, 40,  l_line_x[46],3);
+//         tft180_show_uint(100, 80,  longest_White_Column_site, 6);
+         tft180_show_uint(100, 16,  top_junp_change_sign_num, 2);
+         tft180_show_uint(100, 32,  bottom_junp_change_sign_num, 2);
+         tft180_show_uint(100, 48,  left_junp_change_sign_num, 2);
+         tft180_show_uint(100, 64,  right_junp_change_sign_num, 2);
+         tft180_show_uint(130, 16,  road_type.straight, 1);
+         tft180_show_uint(130, 32,  road_type.ten, 1);
+         tft180_show_uint(130, 48,  road_type.left_right_angle_bend, 1);
+         tft180_show_uint(130, 64,  road_type.right_right_angle_bend, 1);
         // 此处编写需要循环执行的代码
     }
+}
+
+void pit0_ch0_isr()                     // 定时器通道 0 周期中断服务函数     
+{
+   pit_isr_flag_clear(PIT_CH0);	  
+   
+   Error_Angle.time++;
+   imu660ra_get_acc();                                                     // 获取 imu660ra 的加速度测量数值
+   imu660ra_get_gyro();                                                    // 获取 imu660ra 的角速度测量数值
+   Get_New_Angle();
+   Madgwick_AHRS_6_DOF_Get_Angle(BETA, 0, IMU660RA, 10);      
+   New_angle = IMU.angle.yaw_a - Error_Angle.k*(Error_Angle.time)- Error_Angle.add;  //线性回归	
+	
+}
+
+void pit0_ch1_isr()                     // 定时器通道 1 周期中断服务函数      
+{
+    pit_isr_flag_clear(PIT_CH1);
+//    Get_encoder();
+//    PID_Control();
+    
 }
 
 // **************************** 代码区域 ****************************
