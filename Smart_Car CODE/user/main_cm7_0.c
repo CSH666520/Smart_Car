@@ -137,6 +137,7 @@ int main()
          tft180_show_uint(130, 32,  road_type.ten, 1);
          tft180_show_uint(130, 48,  road_type.left_right_angle_bend, 1);
          tft180_show_uint(130, 64,  road_type.right_right_angle_bend, 1);
+         tft180_show_uint(130, 80,  road_type.ben_ring, 1);
         // 此处编写需要循环执行的代码
     }
 }
