@@ -15,10 +15,13 @@ int16_t  right_out,left_out;
 int PWM_A;
 int PWM_B;
 
+int Speed_left= 50;
+int Speed_right= 50;
+
 //¡Áa?¨°?¡¤
 float turn_kp = 0; //-8
 float turn_kd = 0; //-0.04
-float blance_turn = 0.0;
+float blance_turn = 30.0;
 float Now_turn = 0;
 
 void PID_init(PID* PID,float kp,float ki,float kd)
@@ -64,7 +67,7 @@ int16 position_PID(PID* PID,float Now_speed,int16_t target_speed)
       PID->ki_out=PID->ki*PID->err_sum;
       PID->kd_out=PID->kd*(PID->err-PID->last_err);
       PID->last_err=PID->err;
-      PID->output=(int16_t)(PID->kp_out + PID->ki_out+ PID->kd_out);
+      PID->output=(int16_t)(PID->kp_out + PID->ki_out+ PID->kd_out)  ;
         if( PID->output>=10000)
          PID->output=10000;
         else if(PID->output<=-10000)
@@ -82,14 +85,14 @@ float PID_Turn(float kp , float kd, float Now_yaw, float blance_yaw)
 {
 	float bias_yaw;
 	bias_yaw = Now_yaw - blance_yaw;
-	if(bias_yaw > 100) 
-	{
-		bias_yaw = -10;
-	}
-	if(bias_yaw < -100)
-	{
-		bias_yaw = 10;
-	}
+//	if(bias_yaw > 100) 
+//	{
+//		bias_yaw = -10;
+//	}
+//	if(bias_yaw < -100)
+//	{
+//		bias_yaw = 10;
+//	}
 	return kp*bias_yaw + kd*imu660ra_gyro_z;
 }
 

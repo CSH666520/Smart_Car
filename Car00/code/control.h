@@ -23,6 +23,9 @@ extern float turn_kd;
 extern float blance_turn ;
 extern float Now_turn;
 
+extern int Speed_left ;
+extern int Speed_right  ;
+
 
 extern PID  PID_Angle,PID_Left,PID_right;
 

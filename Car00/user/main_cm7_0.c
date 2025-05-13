@@ -60,12 +60,14 @@
 
 extern int16 l_line_x[LCDH], r_line_x[LCDH]; 
 extern int16 l_line_x_l[LCDH], r_line_x_l[LCDH];
+
+
 int i;
 
 /**********元素处理结构体**********/
 extern struct YUAN_SU road_type ; 
 
-int main(void)
+ int main(void)
 {
     clock_init(SYSTEM_CLOCK_250M); 	// 时钟配置及系统初始化<务必保留>
     debug_init();                   // 调试串口信息初始化
@@ -99,8 +101,8 @@ int main(void)
     
     PID_init(&PID_Angle,-0.1,0,0);
     
-    PID_init(&PID_Left,34,0.3,0.1);
-    PID_init(&PID_right,34,0.3,0.1);
+    PID_init(&PID_Left,40,0.2,0.5);
+    PID_init(&PID_right,40,0.2,0.5);
     
     
     
@@ -125,7 +127,7 @@ int main(void)
             dou_Longest_White_Column();
             tft180_displayimage03x((const uint8 *)image_01, 94, 60);    
             Element_Judge(); 
-            turn_zhijiao();
+
         }
 
             for( i=0;i<58;i++)
@@ -143,12 +145,15 @@ int main(void)
                  }
              }         
  
-        tft180_show_uint(100, 48,  road_type.right_right_angle_bend, 6);
-         tft180_show_uint(100, 64,  longest_White_Column, 6);
+        tft180_show_uint(100, 32,  road_type.right_right_angle_bend, 6);
+         tft180_show_int(100, 48,  longest_White_Column, 6);
+         
+         tft180_show_int(100, 64, encoder_data_dir[1], 6);
+         tft180_show_int(100, 80,  encoder_data_dir[2], 6);
 //        tft180_show_int(100, 16*5, left_junp_change_sign_num , 5);
 //        tft180_show_int(100, 16*6, right_junp_change_sign_num , 5);
 //        tft180_show_int(100, 16*2, (l_line_x_l[20] + r_line_x_l[20])/2 , 5);            
-   
+      //  tft180_show_uint(100, 48,  r_lose_value, 2);
         // 此处编写需要循环执行的代码
     }
 }
@@ -164,17 +169,26 @@ void pit0_ch0_isr()                     // 定时器通道 0 周期中断服务函数
    Get_New_Angle();
    Madgwick_AHRS_6_DOF_Get_Angle(BETA, 0, IMU660RA, 10);      
    New_angle = IMU.angle.yaw_a - Error_Angle.k*(Error_Angle.time)- Error_Angle.add;  //线性回归	
-	
+   
+
 }
 
 void pit0_ch1_isr()                     // 定时器通道 1 周期中断服务函数      
 {
     pit_isr_flag_clear(PIT_CH1);
-    Get_encoder();
+    Get_encoder();        
+   
    //PID_Control()
-//    Position_Velocity_Controller(30 -  Make_Car_Follow_Line_PWM(),30 +  Make_Car_Follow_Line_PWM()); 
-    PWM_A = 30 -  Make_Car_Follow_Line_PWM() +  (int)(PID_Turn(turn_kp , turn_kd, (int)(New_angle - Now_turn), blance_turn ));
-    PWM_B = 30 +  Make_Car_Follow_Line_PWM() -  (int)(PID_Turn(turn_kp , turn_kd, (int)(New_angle - Now_turn), blance_turn));
+//    Position_Velocity_Controller(30 -  Make_Car_Follow_Line_PWM(),30 +  Make_Car_Follow_Line_PWM());
+    turn_zhijiao(); 
+  PWM_A = Speed_left -  Make_Car_Follow_Line_PWM() +  (int)(PID_Turn(turn_kp , turn_kd, (int)(New_angle - Now_turn), blance_turn ));
+  PWM_B = Speed_right +  Make_Car_Follow_Line_PWM() -  (int)(PID_Turn(turn_kp , turn_kd, (int)(New_angle - Now_turn), blance_turn)); 
+    
+    
+    
+//     turn_kp = -8; //8
+//     turn_kd = -0.04; //0.04
+
     Speed_Limit();
     Position_Velocity_Controller(PWM_A,PWM_B); 
 }
