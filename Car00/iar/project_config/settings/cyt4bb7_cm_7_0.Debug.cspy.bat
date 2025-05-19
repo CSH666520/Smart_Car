@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\IAR\common\bin\cspybat" -f "C:\Users\jty\Desktop\CYT4BB7_Library-master\CYT4BB7_Library-master\Example\Coreboard_Demo\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.general.xcl" --backend -f "C:\Users\jty\Desktop\CYT4BB7_Library-master\CYT4BB7_Library-master\Example\Coreboard_Demo\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.driver.xcl" 
+"C:\iar1\common\bin\cspybat" -f "C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.general.xcl" --backend -f "C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\IAR\common\bin\cspybat" -f "C:\Users\jty\Desktop\CYT4BB7_Library-master\CYT4BB7_Library-master\Example\Coreboard_Demo\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\jty\Desktop\CYT4BB7_Library-master\CYT4BB7_Library-master\Example\Coreboard_Demo\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.driver.xcl" 
+"C:\iar1\common\bin\cspybat" -f "C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.driver.xcl" 
 
 @echo off 
 :end
