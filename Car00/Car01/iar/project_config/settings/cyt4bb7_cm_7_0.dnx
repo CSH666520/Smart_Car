@@ -11,7 +11,7 @@
     </Jet>
     <PlDriver>
         <FirstRun>0</FirstRun>
-        <MemConfigValue>C:\IAR\arm\config\debugger\Infineon\CYT4BB_M7.ddf</MemConfigValue>
+        <MemConfigValue>D:\IAR\arm\config\debugger\Infineon\CYT4BB_M7.ddf</MemConfigValue>
     </PlDriver>
     <DebugChecksum>
         <Checksum>2054012552</Checksum>
@@ -51,8 +51,8 @@
         <PowerConnectPC>1</PowerConnectPC>
     </SWOManager>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>1</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <Trace1>
         <Enabled>0</Enabled>

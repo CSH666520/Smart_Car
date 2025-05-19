@@ -1,12 +1,11 @@
-C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\Debug_m7_0\BrowseInfo\code_17896468042025673432.dir\Follow_Line.pbi: \
-  C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\code\Follow_Line.c \
-  C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\code\Follow_Line.h \
-  C:\iar1\arm\inc\c\stdint.h C:\iar1\arm\inc\c\ycheck.h \
-  C:\iar1\arm\inc\c\yvals.h C:\iar1\arm\inc\c\DLib_Defaults.h \
-  C:\iar1\arm\inc\c\DLib_Config_Normal.h \
-  C:\iar1\arm\inc\c\DLib_Product.h \
-  C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\code\camera.h \
-  C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\code\control.h \
-  C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\code\headfile.h \
-  C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\code\motor.h \
-  C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\code\Get_Angle.h
+C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\iar\Debug_m7_0\BrowseInfo\code_17896468042025673432.dir\Follow_Line.pbi: \
+  C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\code\Follow_Line.c \
+  C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\code\Follow_Line.h \
+  D:\IAR\arm\inc\c\stdint.h D:\IAR\arm\inc\c\ycheck.h \
+  D:\IAR\arm\inc\c\yvals.h D:\IAR\arm\inc\c\DLib_Defaults.h \
+  D:\IAR\arm\inc\c\DLib_Config_Normal.h D:\IAR\arm\inc\c\DLib_Product.h \
+  C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\code\camera.h \
+  C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\code\control.h \
+  C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\code\headfile.h \
+  C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\code\motor.h \
+  C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\code\Get_Angle.h

@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\iar1\common\bin\cspybat" -f "C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.general.xcl" --backend -f "C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.driver.xcl" 
+& "D:\IAR\common\bin\cspybat" -f "C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.general.xcl" --backend -f "C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.driver.xcl" 
 }
 else
 {
-& "C:\iar1\common\bin\cspybat" -f "C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\CSH\Desktop\CYT4BB7_Library-master\Example\Motherboard_Demo\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.driver.xcl" 
+& "D:\IAR\common\bin\cspybat" -f "C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\acanes\OneDrive\Documents\GitHub\Smart_Car\Car00\iar\project_config\settings\cyt4bb7_cm_7_0.Debug.driver.xcl" 
 }
