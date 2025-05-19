@@ -6780,1468 +6780,6 @@
     "scope": null
   },
   {
-    "ID": "c:get_angle.h@33@macro@__GET_ANGLE_H__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__GET_ANGLE_H__",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "__GET_ANGLE_H__",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:GET_ANGLE.h@33@macro@__GET_ANGLE_H__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__GET_ANGLE_H__",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "__GET_ANGLE_H__",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:get_angle.h@98@macro@Gyro_R",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Gyro_R",
-    "location": {
-      "column": "12",
-      "line": "6",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "Gyro_R",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:GET_ANGLE.h@98@macro@Gyro_R",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Gyro_R",
-    "location": {
-      "column": "12",
-      "line": "6",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "Gyro_R",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@IMU_MODE_SELECT",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@IMU_MODE_SELECT@IMU963RA",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "IMU963RA",
-        "location": {
-          "column": "5",
-          "line": "9",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "IMU963RA",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@IMU_MODE_SELECT@IMU660RA",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "IMU660RA",
-        "location": {
-          "column": "5",
-          "line": "10",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "IMU660RA",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@IMU_MODE_SELECT@ICM20948",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "ICM20948",
-        "location": {
-          "column": "5",
-          "line": "11",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "ICM20948",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "8",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@SA@Butter_BufferData",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "9",
-      "line": "14",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "members": [
-      {
-        "ID": "c:@SA@Butter_BufferData@FI@Input_Butter",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "Input_Butter",
-        "location": {
-          "column": "8",
-          "line": "16",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "Input_Butter",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_14_9"
-      },
-      {
-        "ID": "c:@SA@Butter_BufferData@FI@Output_Butter",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "Output_Butter",
-        "location": {
-          "column": "8",
-          "line": "17",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "Output_Butter",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_14_9"
-      },
-      {
-        "ID": "c:@T@Butter_BufferData",
-        "What": "TypedefDecl",
-        "defdec": "Def",
-        "display": "struct Butter_BufferData",
-        "location": {
-          "column": "2",
-          "line": "18",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "Butter_BufferData",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_14_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@SA@Butter_Parameter",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "members": [
-      {
-        "ID": "c:@SA@Butter_Parameter@FI@a",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "a",
-        "location": {
-          "column": "9",
-          "line": "22",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "a",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_20_9"
-      },
-      {
-        "ID": "c:@SA@Butter_Parameter@FI@b",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "b",
-        "location": {
-          "column": "9",
-          "line": "23",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "b",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_20_9"
-      },
-      {
-        "ID": "c:@T@Butter_Parameter",
-        "What": "TypedefDecl",
-        "defdec": "Def",
-        "display": "struct Butter_Parameter",
-        "location": {
-          "column": "2",
-          "line": "24",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "Butter_Parameter",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_20_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@SA@IMU_Offset_s",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "9",
-      "line": "26",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "members": [
-      {
-        "ID": "c:@SA@IMU_Offset_s@FI@acce_x",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "acce_x",
-        "location": {
-          "column": "11",
-          "line": "27",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "acce_x",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_26_9"
-      },
-      {
-        "ID": "c:@SA@IMU_Offset_s@FI@acce_y",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "acce_y",
-        "location": {
-          "column": "11",
-          "line": "28",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "acce_y",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_26_9"
-      },
-      {
-        "ID": "c:@SA@IMU_Offset_s@FI@acce_z",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "acce_z",
-        "location": {
-          "column": "11",
-          "line": "29",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "acce_z",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_26_9"
-      },
-      {
-        "ID": "c:@SA@IMU_Offset_s@FI@gyro_x",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gyro_x",
-        "location": {
-          "column": "11",
-          "line": "30",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gyro_x",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_26_9"
-      },
-      {
-        "ID": "c:@SA@IMU_Offset_s@FI@gyro_y",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gyro_y",
-        "location": {
-          "column": "11",
-          "line": "31",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gyro_y",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_26_9"
-      },
-      {
-        "ID": "c:@SA@IMU_Offset_s@FI@gyro_z",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gyro_z",
-        "location": {
-          "column": "11",
-          "line": "32",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gyro_z",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_26_9"
-      },
-      {
-        "ID": "c:@T@IMU_Offset_s",
-        "What": "TypedefDecl",
-        "defdec": "Def",
-        "display": "struct IMU_Offset_s",
-        "location": {
-          "column": "2",
-          "line": "33",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "IMU_Offset_s",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_26_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@SA@imu_data_s",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "9",
-      "line": "35",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "members": [
-      {
-        "ID": "c:@SA@imu_data_s@FI@gx_a",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gx_a",
-        "location": {
-          "column": "11",
-          "line": "36",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gx_a",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@gy_a",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gy_a",
-        "location": {
-          "column": "16",
-          "line": "36",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gy_a",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@gz_a",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gz_a",
-        "location": {
-          "column": "21",
-          "line": "36",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gz_a",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@gx_r",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gx_r",
-        "location": {
-          "column": "11",
-          "line": "37",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gx_r",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@gy_r",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gy_r",
-        "location": {
-          "column": "16",
-          "line": "37",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gy_r",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@gz_r",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gz_r",
-        "location": {
-          "column": "21",
-          "line": "37",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gz_r",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@gx_r_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gx_r_old",
-        "location": {
-          "column": "11",
-          "line": "38",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gx_r_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@gy_r_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gy_r_old",
-        "location": {
-          "column": "20",
-          "line": "38",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gy_r_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@gz_r_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "gz_r_old",
-        "location": {
-          "column": "29",
-          "line": "38",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "gz_r_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@ax",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "ax",
-        "location": {
-          "column": "11",
-          "line": "39",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "ax",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@ay",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "ay",
-        "location": {
-          "column": "15",
-          "line": "39",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "ay",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@az",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "az",
-        "location": {
-          "column": "19",
-          "line": "39",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "az",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@ax_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "ax_old",
-        "location": {
-          "column": "11",
-          "line": "40",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "ax_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@ay_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "ay_old",
-        "location": {
-          "column": "19",
-          "line": "40",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "ay_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@az_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "az_old",
-        "location": {
-          "column": "27",
-          "line": "40",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "az_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@mx",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "mx",
-        "location": {
-          "column": "11",
-          "line": "41",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "mx",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@my",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "my",
-        "location": {
-          "column": "15",
-          "line": "41",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "my",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@mz",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "mz",
-        "location": {
-          "column": "19",
-          "line": "41",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "mz",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@mx_f",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "mx_f",
-        "location": {
-          "column": "11",
-          "line": "42",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "mx_f",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@my_f",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "my_f",
-        "location": {
-          "column": "16",
-          "line": "42",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "my_f",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@mz_f",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "mz_f",
-        "location": {
-          "column": "21",
-          "line": "42",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "mz_f",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      },
-      {
-        "ID": "c:@SA@imu_data_s@FI@offset",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "offset",
-        "location": {
-          "column": "18",
-          "line": "43",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "offset",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_35_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@T@imu_data_s",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "struct imu_data_s",
-    "location": {
-      "column": "3",
-      "line": "44",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "imu_data_s",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@SA@EulerAngle_s",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "9",
-      "line": "49",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "members": [
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@roll_a",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "roll_a",
-        "location": {
-          "column": "11",
-          "line": "50",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "roll_a",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@roll_a_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "roll_a_old",
-        "location": {
-          "column": "11",
-          "line": "51",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "roll_a_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@pitch_a",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "pitch_a",
-        "location": {
-          "column": "11",
-          "line": "52",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "pitch_a",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@pitch_a_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "pitch_a_old",
-        "location": {
-          "column": "11",
-          "line": "53",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "pitch_a_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@yaw_a",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "yaw_a",
-        "location": {
-          "column": "11",
-          "line": "54",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "yaw_a",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@yaw_a_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "yaw_a_old",
-        "location": {
-          "column": "11",
-          "line": "55",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "yaw_a_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@yaw_s",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "yaw_s",
-        "location": {
-          "column": "11",
-          "line": "56",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "yaw_s",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@roll_r",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "roll_r",
-        "location": {
-          "column": "11",
-          "line": "57",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "roll_r",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@pitch_r",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "pitch_r",
-        "location": {
-          "column": "11",
-          "line": "58",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "pitch_r",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@SA@EulerAngle_s@FI@yaw_r",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "yaw_r",
-        "location": {
-          "column": "11",
-          "line": "59",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "yaw_r",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      },
-      {
-        "ID": "c:@T@EulerAngle_s",
-        "What": "TypedefDecl",
-        "defdec": "Def",
-        "display": "struct EulerAngle_s",
-        "location": {
-          "column": "2",
-          "line": "61",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "EulerAngle_s",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_49_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@SA@imu_Data_All_s",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "9",
-      "line": "63",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "members": [
-      {
-        "ID": "c:@SA@imu_Data_All_s@FI@data",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "data",
-        "location": {
-          "column": "16",
-          "line": "64",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "data",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_63_9"
-      },
-      {
-        "ID": "c:@SA@imu_Data_All_s@FI@angle",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "angle",
-        "location": {
-          "column": "18",
-          "line": "65",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "angle",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_63_9"
-      },
-      {
-        "ID": "c:@T@imu_Data_All_s",
-        "What": "TypedefDecl",
-        "defdec": "Def",
-        "display": "struct imu_Data_All_s",
-        "location": {
-          "column": "2",
-          "line": "66",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "imu_Data_All_s",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_63_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@SA@Quaternion",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "9",
-      "line": "69",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "members": [
-      {
-        "ID": "c:@SA@Quaternion@FI@q0",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "q0",
-        "location": {
-          "column": "11",
-          "line": "71",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "q0",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_69_9"
-      },
-      {
-        "ID": "c:@SA@Quaternion@FI@q1",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "q1",
-        "location": {
-          "column": "11",
-          "line": "72",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "q1",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_69_9"
-      },
-      {
-        "ID": "c:@SA@Quaternion@FI@q2",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "q2",
-        "location": {
-          "column": "11",
-          "line": "73",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "q2",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_69_9"
-      },
-      {
-        "ID": "c:@SA@Quaternion@FI@q3",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "q3",
-        "location": {
-          "column": "11",
-          "line": "74",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "q3",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_69_9"
-      },
-      {
-        "ID": "c:@SA@Quaternion@FI@q0_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "q0_old",
-        "location": {
-          "column": "11",
-          "line": "75",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "q0_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_69_9"
-      },
-      {
-        "ID": "c:@SA@Quaternion@FI@q1_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "q1_old",
-        "location": {
-          "column": "11",
-          "line": "76",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "q1_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_69_9"
-      },
-      {
-        "ID": "c:@SA@Quaternion@FI@q2_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "q2_old",
-        "location": {
-          "column": "11",
-          "line": "77",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "q2_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_69_9"
-      },
-      {
-        "ID": "c:@SA@Quaternion@FI@q3_old",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "q3_old",
-        "location": {
-          "column": "11",
-          "line": "78",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "name": "q3_old",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_69_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@T@Quaternion",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "struct Quaternion",
-    "location": {
-      "column": "3",
-      "line": "79",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "Quaternion",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "",
-    "location": {
-      "column": "9",
-      "line": "81",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "members": [
-      {
-        "ID": "c:get_angle.h@S@get_angle.h@1735",
-        "What": "Struct",
-        "defdec": "Def",
-        "display": "",
-        "location": {
-          "column": "9",
-          "line": "81",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-        },
-        "members": [
-          {
-            "ID": "c:get_angle.h@S@get_angle.h@1735@FI@time",
-            "What": "FieldDecl",
-            "defdec": "Def",
-            "display": "time",
-            "location": {
-              "column": "12",
-              "line": "83",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "time",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735@FI@time",
-            "What": "FieldDecl",
-            "defdec": "Def",
-            "display": "time",
-            "location": {
-              "column": "12",
-              "line": "83",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "time",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:get_angle.h@S@get_angle.h@1735@FI@flag",
-            "What": "FieldDecl",
-            "defdec": "Def",
-            "display": "flag",
-            "location": {
-              "column": "7",
-              "line": "84",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "flag",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735@FI@flag",
-            "What": "FieldDecl",
-            "defdec": "Def",
-            "display": "flag",
-            "location": {
-              "column": "7",
-              "line": "84",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "flag",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:get_angle.h@S@get_angle.h@1735@FI@add",
-            "What": "FieldDecl",
-            "defdec": "Def",
-            "display": "add",
-            "location": {
-              "column": "9",
-              "line": "85",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "add",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735@FI@add",
-            "What": "FieldDecl",
-            "defdec": "Def",
-            "display": "add",
-            "location": {
-              "column": "9",
-              "line": "85",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "add",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:get_angle.h@S@get_angle.h@1735@FI@k",
-            "What": "FieldDecl",
-            "defdec": "Def",
-            "display": "k",
-            "location": {
-              "column": "9",
-              "line": "86",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "k",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735@FI@k",
-            "What": "FieldDecl",
-            "defdec": "Def",
-            "display": "k",
-            "location": {
-              "column": "9",
-              "line": "86",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "k",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:get_angle.h@T@error_Angle",
-            "What": "TypedefDecl",
-            "defdec": "Def",
-            "display": "struct (anonymous struct at C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\iar\\project_config\\..\\..\\code\\get_angle.h:81:9)",
-            "location": {
-              "column": "2",
-              "line": "87",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "error_Angle",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          },
-          {
-            "ID": "c:GET_ANGLE.h@T@error_Angle",
-            "What": "TypedefDecl",
-            "defdec": "Def",
-            "display": "struct (anonymous struct at C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code/GET_ANGLE.h:81:9)",
-            "location": {
-              "column": "2",
-              "line": "87",
-              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-            },
-            "name": "error_Angle",
-            "origin": "user_include",
-            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
-          }
-        ],
-        "name": "",
-        "origin": "user_include",
-        "scope": "_anonymous_get_angle_h_81_9"
-      }
-    ],
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@IMU",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "IMU",
-    "location": {
-      "column": "23",
-      "line": "90",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "IMU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@q",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "q",
-    "location": {
-      "column": "19",
-      "line": "91",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "q",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@q",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "q",
-    "location": {
-      "column": "19",
-      "line": "91",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "q",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@New_angle",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "New_angle",
-    "location": {
-      "column": "14",
-      "line": "92",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "New_angle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Error_Angle",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Error_Angle",
-    "location": {
-      "column": "20",
-      "line": "94",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "Error_Angle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Get_New_Angle",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Get_New_Angle(void)",
-    "location": {
-      "column": "6",
-      "line": "96",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "Get_New_Angle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Get_New_Angle",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Get_New_Angle(void)",
-    "location": {
-      "column": "6",
-      "line": "96",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "Get_New_Angle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@IMU_Offset_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void IMU_Offset_Init(IMU_MODE_SELECT)",
-    "location": {
-      "column": "6",
-      "line": "98",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "IMU_Offset_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@IMU_Offset_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void IMU_Offset_Init(IMU_MODE_SELECT)",
-    "location": {
-      "column": "6",
-      "line": "98",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "IMU_Offset_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Madgwick_9_DOF_Get_Angle",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Madgwick_9_DOF_Get_Angle(IMU_MODE_SELECT, int)",
-    "location": {
-      "column": "6",
-      "line": "100",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "Madgwick_9_DOF_Get_Angle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Madgwick_AHRS_6_DOF_Get_Angle",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Madgwick_AHRS_6_DOF_Get_Angle(double, int, IMU_MODE_SELECT, int)",
-    "location": {
-      "column": "6",
-      "line": "102",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "Madgwick_AHRS_6_DOF_Get_Angle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@BETA",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "BETA",
-    "location": {
-      "column": "15",
-      "line": "103",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "BETA",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@BETA",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "BETA",
-    "location": {
-      "column": "15",
-      "line": "103",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "BETA",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@abs1",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "float abs1(float)",
-    "location": {
-      "column": "7",
-      "line": "104",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "abs1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@abs1",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "float abs1(float)",
-    "location": {
-      "column": "7",
-      "line": "104",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "abs1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@AHRS_6_DOF_Get_Angle",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void AHRS_6_DOF_Get_Angle(IMU_MODE_SELECT, float)",
-    "location": {
-      "column": "6",
-      "line": "105",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "AHRS_6_DOF_Get_Angle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@AHRS_6_DOF_Get_Angle",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void AHRS_6_DOF_Get_Angle(IMU_MODE_SELECT, float)",
-    "location": {
-      "column": "6",
-      "line": "105",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
-    },
-    "name": "AHRS_6_DOF_Get_Angle",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:yvals.h@120@macro@_YVALS",
     "What": "MacroDef",
     "defdec": "Def",
@@ -9559,6 +8097,1468 @@
       "path": "C:\\iar1\\arm\\inc\\c\\yvals.h"
     },
     "name": "__iar_Unlockdynamiclock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:GET_ANGLE.h@33@macro@__GET_ANGLE_H__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__GET_ANGLE_H__",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "__GET_ANGLE_H__",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:get_angle.h@33@macro@__GET_ANGLE_H__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__GET_ANGLE_H__",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "__GET_ANGLE_H__",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:get_angle.h@98@macro@Gyro_R",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Gyro_R",
+    "location": {
+      "column": "12",
+      "line": "6",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "Gyro_R",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:GET_ANGLE.h@98@macro@Gyro_R",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Gyro_R",
+    "location": {
+      "column": "12",
+      "line": "6",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "Gyro_R",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@IMU_MODE_SELECT",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@IMU_MODE_SELECT@IMU963RA",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "IMU963RA",
+        "location": {
+          "column": "5",
+          "line": "9",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "IMU963RA",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@IMU_MODE_SELECT@IMU660RA",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "IMU660RA",
+        "location": {
+          "column": "5",
+          "line": "10",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "IMU660RA",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@IMU_MODE_SELECT@ICM20948",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "ICM20948",
+        "location": {
+          "column": "5",
+          "line": "11",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "ICM20948",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@Butter_BufferData",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "14",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@Butter_BufferData@FI@Input_Butter",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "Input_Butter",
+        "location": {
+          "column": "8",
+          "line": "16",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "Input_Butter",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_14_9"
+      },
+      {
+        "ID": "c:@SA@Butter_BufferData@FI@Output_Butter",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "Output_Butter",
+        "location": {
+          "column": "8",
+          "line": "17",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "Output_Butter",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_14_9"
+      },
+      {
+        "ID": "c:@T@Butter_BufferData",
+        "What": "TypedefDecl",
+        "defdec": "Def",
+        "display": "struct Butter_BufferData",
+        "location": {
+          "column": "2",
+          "line": "18",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "Butter_BufferData",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_14_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@Butter_Parameter",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "20",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@Butter_Parameter@FI@a",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "a",
+        "location": {
+          "column": "9",
+          "line": "22",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "a",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_20_9"
+      },
+      {
+        "ID": "c:@SA@Butter_Parameter@FI@b",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "b",
+        "location": {
+          "column": "9",
+          "line": "23",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "b",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_20_9"
+      },
+      {
+        "ID": "c:@T@Butter_Parameter",
+        "What": "TypedefDecl",
+        "defdec": "Def",
+        "display": "struct Butter_Parameter",
+        "location": {
+          "column": "2",
+          "line": "24",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "Butter_Parameter",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_20_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@IMU_Offset_s",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "26",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@IMU_Offset_s@FI@acce_x",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "acce_x",
+        "location": {
+          "column": "11",
+          "line": "27",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "acce_x",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_26_9"
+      },
+      {
+        "ID": "c:@SA@IMU_Offset_s@FI@acce_y",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "acce_y",
+        "location": {
+          "column": "11",
+          "line": "28",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "acce_y",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_26_9"
+      },
+      {
+        "ID": "c:@SA@IMU_Offset_s@FI@acce_z",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "acce_z",
+        "location": {
+          "column": "11",
+          "line": "29",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "acce_z",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_26_9"
+      },
+      {
+        "ID": "c:@SA@IMU_Offset_s@FI@gyro_x",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gyro_x",
+        "location": {
+          "column": "11",
+          "line": "30",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gyro_x",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_26_9"
+      },
+      {
+        "ID": "c:@SA@IMU_Offset_s@FI@gyro_y",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gyro_y",
+        "location": {
+          "column": "11",
+          "line": "31",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gyro_y",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_26_9"
+      },
+      {
+        "ID": "c:@SA@IMU_Offset_s@FI@gyro_z",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gyro_z",
+        "location": {
+          "column": "11",
+          "line": "32",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gyro_z",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_26_9"
+      },
+      {
+        "ID": "c:@T@IMU_Offset_s",
+        "What": "TypedefDecl",
+        "defdec": "Def",
+        "display": "struct IMU_Offset_s",
+        "location": {
+          "column": "2",
+          "line": "33",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "IMU_Offset_s",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_26_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@imu_data_s",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "35",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@imu_data_s@FI@gx_a",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gx_a",
+        "location": {
+          "column": "11",
+          "line": "36",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gx_a",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@gy_a",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gy_a",
+        "location": {
+          "column": "16",
+          "line": "36",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gy_a",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@gz_a",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gz_a",
+        "location": {
+          "column": "21",
+          "line": "36",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gz_a",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@gx_r",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gx_r",
+        "location": {
+          "column": "11",
+          "line": "37",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gx_r",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@gy_r",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gy_r",
+        "location": {
+          "column": "16",
+          "line": "37",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gy_r",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@gz_r",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gz_r",
+        "location": {
+          "column": "21",
+          "line": "37",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gz_r",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@gx_r_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gx_r_old",
+        "location": {
+          "column": "11",
+          "line": "38",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gx_r_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@gy_r_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gy_r_old",
+        "location": {
+          "column": "20",
+          "line": "38",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gy_r_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@gz_r_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "gz_r_old",
+        "location": {
+          "column": "29",
+          "line": "38",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "gz_r_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@ax",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "ax",
+        "location": {
+          "column": "11",
+          "line": "39",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "ax",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@ay",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "ay",
+        "location": {
+          "column": "15",
+          "line": "39",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "ay",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@az",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "az",
+        "location": {
+          "column": "19",
+          "line": "39",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "az",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@ax_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "ax_old",
+        "location": {
+          "column": "11",
+          "line": "40",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "ax_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@ay_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "ay_old",
+        "location": {
+          "column": "19",
+          "line": "40",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "ay_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@az_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "az_old",
+        "location": {
+          "column": "27",
+          "line": "40",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "az_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@mx",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "mx",
+        "location": {
+          "column": "11",
+          "line": "41",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "mx",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@my",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "my",
+        "location": {
+          "column": "15",
+          "line": "41",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "my",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@mz",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "mz",
+        "location": {
+          "column": "19",
+          "line": "41",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "mz",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@mx_f",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "mx_f",
+        "location": {
+          "column": "11",
+          "line": "42",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "mx_f",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@my_f",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "my_f",
+        "location": {
+          "column": "16",
+          "line": "42",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "my_f",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@mz_f",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "mz_f",
+        "location": {
+          "column": "21",
+          "line": "42",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "mz_f",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      },
+      {
+        "ID": "c:@SA@imu_data_s@FI@offset",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "offset",
+        "location": {
+          "column": "18",
+          "line": "43",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "offset",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_35_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@T@imu_data_s",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "struct imu_data_s",
+    "location": {
+      "column": "3",
+      "line": "44",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "imu_data_s",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@EulerAngle_s",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "49",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@roll_a",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "roll_a",
+        "location": {
+          "column": "11",
+          "line": "50",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "roll_a",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@roll_a_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "roll_a_old",
+        "location": {
+          "column": "11",
+          "line": "51",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "roll_a_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@pitch_a",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "pitch_a",
+        "location": {
+          "column": "11",
+          "line": "52",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "pitch_a",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@pitch_a_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "pitch_a_old",
+        "location": {
+          "column": "11",
+          "line": "53",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "pitch_a_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@yaw_a",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "yaw_a",
+        "location": {
+          "column": "11",
+          "line": "54",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "yaw_a",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@yaw_a_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "yaw_a_old",
+        "location": {
+          "column": "11",
+          "line": "55",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "yaw_a_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@yaw_s",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "yaw_s",
+        "location": {
+          "column": "11",
+          "line": "56",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "yaw_s",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@roll_r",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "roll_r",
+        "location": {
+          "column": "11",
+          "line": "57",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "roll_r",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@pitch_r",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "pitch_r",
+        "location": {
+          "column": "11",
+          "line": "58",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "pitch_r",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@SA@EulerAngle_s@FI@yaw_r",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "yaw_r",
+        "location": {
+          "column": "11",
+          "line": "59",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "yaw_r",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      },
+      {
+        "ID": "c:@T@EulerAngle_s",
+        "What": "TypedefDecl",
+        "defdec": "Def",
+        "display": "struct EulerAngle_s",
+        "location": {
+          "column": "2",
+          "line": "61",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "EulerAngle_s",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_49_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@imu_Data_All_s",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "63",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@imu_Data_All_s@FI@data",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "data",
+        "location": {
+          "column": "16",
+          "line": "64",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "data",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_63_9"
+      },
+      {
+        "ID": "c:@SA@imu_Data_All_s@FI@angle",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "angle",
+        "location": {
+          "column": "18",
+          "line": "65",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "angle",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_63_9"
+      },
+      {
+        "ID": "c:@T@imu_Data_All_s",
+        "What": "TypedefDecl",
+        "defdec": "Def",
+        "display": "struct imu_Data_All_s",
+        "location": {
+          "column": "2",
+          "line": "66",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "imu_Data_All_s",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_63_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@Quaternion",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "69",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@Quaternion@FI@q0",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "q0",
+        "location": {
+          "column": "11",
+          "line": "71",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "q0",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_69_9"
+      },
+      {
+        "ID": "c:@SA@Quaternion@FI@q1",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "q1",
+        "location": {
+          "column": "11",
+          "line": "72",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "q1",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_69_9"
+      },
+      {
+        "ID": "c:@SA@Quaternion@FI@q2",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "q2",
+        "location": {
+          "column": "11",
+          "line": "73",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "q2",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_69_9"
+      },
+      {
+        "ID": "c:@SA@Quaternion@FI@q3",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "q3",
+        "location": {
+          "column": "11",
+          "line": "74",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "q3",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_69_9"
+      },
+      {
+        "ID": "c:@SA@Quaternion@FI@q0_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "q0_old",
+        "location": {
+          "column": "11",
+          "line": "75",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "q0_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_69_9"
+      },
+      {
+        "ID": "c:@SA@Quaternion@FI@q1_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "q1_old",
+        "location": {
+          "column": "11",
+          "line": "76",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "q1_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_69_9"
+      },
+      {
+        "ID": "c:@SA@Quaternion@FI@q2_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "q2_old",
+        "location": {
+          "column": "11",
+          "line": "77",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "q2_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_69_9"
+      },
+      {
+        "ID": "c:@SA@Quaternion@FI@q3_old",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "q3_old",
+        "location": {
+          "column": "11",
+          "line": "78",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "name": "q3_old",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_69_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@T@Quaternion",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "struct Quaternion",
+    "location": {
+      "column": "3",
+      "line": "79",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "Quaternion",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:get_angle.h@S@get_angle.h@1735",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "81",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "members": [
+      {
+        "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735",
+        "What": "Struct",
+        "defdec": "Def",
+        "display": "",
+        "location": {
+          "column": "9",
+          "line": "81",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+        },
+        "members": [
+          {
+            "ID": "c:get_angle.h@S@get_angle.h@1735@FI@time",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "time",
+            "location": {
+              "column": "12",
+              "line": "83",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "time",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735@FI@time",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "time",
+            "location": {
+              "column": "12",
+              "line": "83",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "time",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:get_angle.h@S@get_angle.h@1735@FI@flag",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "flag",
+            "location": {
+              "column": "7",
+              "line": "84",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "flag",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735@FI@flag",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "flag",
+            "location": {
+              "column": "7",
+              "line": "84",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "flag",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735@FI@add",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "add",
+            "location": {
+              "column": "9",
+              "line": "85",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "add",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:get_angle.h@S@get_angle.h@1735@FI@add",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "add",
+            "location": {
+              "column": "9",
+              "line": "85",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "add",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:get_angle.h@S@get_angle.h@1735@FI@k",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "k",
+            "location": {
+              "column": "9",
+              "line": "86",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "k",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:GET_ANGLE.h@S@GET_ANGLE.h@1735@FI@k",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "k",
+            "location": {
+              "column": "9",
+              "line": "86",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "k",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:GET_ANGLE.h@T@error_Angle",
+            "What": "TypedefDecl",
+            "defdec": "Def",
+            "display": "struct (anonymous struct at C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code/GET_ANGLE.h:81:9)",
+            "location": {
+              "column": "2",
+              "line": "87",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "error_Angle",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          },
+          {
+            "ID": "c:get_angle.h@T@error_Angle",
+            "What": "TypedefDecl",
+            "defdec": "Def",
+            "display": "struct (anonymous struct at C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\iar\\project_config\\..\\..\\code\\get_angle.h:81:9)",
+            "location": {
+              "column": "2",
+              "line": "87",
+              "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+            },
+            "name": "error_Angle",
+            "origin": "user_include",
+            "scope": "_anonymous_get_angle_h_81_9::_anonymous_get_angle_h_81_9"
+          }
+        ],
+        "name": "",
+        "origin": "user_include",
+        "scope": "_anonymous_get_angle_h_81_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@IMU",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "IMU",
+    "location": {
+      "column": "23",
+      "line": "90",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "IMU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@q",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "q",
+    "location": {
+      "column": "19",
+      "line": "91",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "q",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@q",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "q",
+    "location": {
+      "column": "19",
+      "line": "91",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "q",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@New_angle",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "New_angle",
+    "location": {
+      "column": "14",
+      "line": "92",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "New_angle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Error_Angle",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Error_Angle",
+    "location": {
+      "column": "20",
+      "line": "94",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "Error_Angle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Get_New_Angle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Get_New_Angle(void)",
+    "location": {
+      "column": "6",
+      "line": "96",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "Get_New_Angle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Get_New_Angle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Get_New_Angle(void)",
+    "location": {
+      "column": "6",
+      "line": "96",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "Get_New_Angle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@IMU_Offset_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void IMU_Offset_Init(IMU_MODE_SELECT)",
+    "location": {
+      "column": "6",
+      "line": "98",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "IMU_Offset_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@IMU_Offset_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void IMU_Offset_Init(IMU_MODE_SELECT)",
+    "location": {
+      "column": "6",
+      "line": "98",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "IMU_Offset_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Madgwick_9_DOF_Get_Angle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Madgwick_9_DOF_Get_Angle(IMU_MODE_SELECT, int)",
+    "location": {
+      "column": "6",
+      "line": "100",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "Madgwick_9_DOF_Get_Angle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Madgwick_AHRS_6_DOF_Get_Angle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Madgwick_AHRS_6_DOF_Get_Angle(double, int, IMU_MODE_SELECT, int)",
+    "location": {
+      "column": "6",
+      "line": "102",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "Madgwick_AHRS_6_DOF_Get_Angle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@BETA",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "BETA",
+    "location": {
+      "column": "15",
+      "line": "103",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "BETA",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@BETA",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "BETA",
+    "location": {
+      "column": "15",
+      "line": "103",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "BETA",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@abs1",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "float abs1(float)",
+    "location": {
+      "column": "7",
+      "line": "104",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "abs1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@abs1",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "float abs1(float)",
+    "location": {
+      "column": "7",
+      "line": "104",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "abs1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@AHRS_6_DOF_Get_Angle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void AHRS_6_DOF_Get_Angle(IMU_MODE_SELECT, float)",
+    "location": {
+      "column": "6",
+      "line": "105",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "AHRS_6_DOF_Get_Angle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@AHRS_6_DOF_Get_Angle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void AHRS_6_DOF_Get_Angle(IMU_MODE_SELECT, float)",
+    "location": {
+      "column": "6",
+      "line": "105",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\get_angle.h"
+    },
+    "name": "AHRS_6_DOF_Get_Angle",
     "origin": "user_include",
     "scope": null
   },
@@ -11767,6 +11767,1058 @@
     "scope": null
   },
   {
+    "ID": "c:Camera.h@28@macro@__CAMERA_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__CAMERA_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "__CAMERA_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Camera.h@84@macro@IMAGEH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IMAGEH",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "IMAGEH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Camera.h@136@macro@IMAGEW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IMAGEW",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "IMAGEW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Camera.h@188@macro@LCDH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LCDH",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "LCDH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Camera.h@245@macro@LCDW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LCDW",
+    "location": {
+      "column": "9",
+      "line": "9",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "LCDW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Camera.h@302@macro@MT9V034_IMAGEH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "MT9V034_IMAGEH",
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "MT9V034_IMAGEH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Camera.h@375@macro@MT9V034_IMAGEW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "MT9V034_IMAGEW",
+    "location": {
+      "column": "9",
+      "line": "11",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "MT9V034_IMAGEW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Camera.h@448@macro@Image_X",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Image_X",
+    "location": {
+      "column": "9",
+      "line": "12",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Image_X",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@YUAN_SU",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "YUAN_SU",
+    "location": {
+      "column": "8",
+      "line": "15",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "members": [
+      {
+        "ID": "c:@S@YUAN_SU@FI@barrier",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "barrier",
+        "location": {
+          "column": "12",
+          "line": "16",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "barrier",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      },
+      {
+        "ID": "c:@S@YUAN_SU@FI@straight",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "straight",
+        "location": {
+          "column": "12",
+          "line": "17",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "straight",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      },
+      {
+        "ID": "c:@S@YUAN_SU@FI@right_right_angle_bend",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "right_right_angle_bend",
+        "location": {
+          "column": "12",
+          "line": "18",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "right_right_angle_bend",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      },
+      {
+        "ID": "c:@S@YUAN_SU@FI@ten",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "ten",
+        "location": {
+          "column": "12",
+          "line": "19",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "ten",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      },
+      {
+        "ID": "c:@S@YUAN_SU@FI@left_right_angle_bend",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "left_right_angle_bend",
+        "location": {
+          "column": "12",
+          "line": "20",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "left_right_angle_bend",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      },
+      {
+        "ID": "c:@S@YUAN_SU@FI@ben_ring",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "ben_ring",
+        "location": {
+          "column": "12",
+          "line": "21",
+          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+        },
+        "name": "ben_ring",
+        "origin": "user_include",
+        "scope": "YUAN_SU"
+      }
+    ],
+    "name": "YUAN_SU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Thres_Interfere",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Thres_Interfere",
+    "location": {
+      "column": "12",
+      "line": "26",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Thres_Interfere",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Thres_Num_Interfere",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Thres_Num_Interfere",
+    "location": {
+      "column": "12",
+      "line": "27",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Thres_Num_Interfere",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Start_Flag",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Start_Flag",
+    "location": {
+      "column": "14",
+      "line": "28",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Start_Flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@l_x_start",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "l_x_start",
+    "location": {
+      "column": "14",
+      "line": "29",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "l_x_start",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@L_Thres_Record",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "L_Thres_Record",
+    "location": {
+      "column": "17",
+      "line": "30",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "L_Thres_Record",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@R_Thres_Record",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "R_Thres_Record",
+    "location": {
+      "column": "17",
+      "line": "31",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "R_Thres_Record",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_L_Start_Point",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_L_Start_Point",
+    "location": {
+      "column": "14",
+      "line": "32",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_L_Start_Point",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_R_Start_Point",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_R_Start_Point",
+    "location": {
+      "column": "14",
+      "line": "33",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_R_Start_Point",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@L_Border",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "L_Border",
+    "location": {
+      "column": "14",
+      "line": "34",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "L_Border",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@R_Border",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "R_Border",
+    "location": {
+      "column": "14",
+      "line": "35",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "R_Border",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_L_Line",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_L_Line",
+    "location": {
+      "column": "15",
+      "line": "36",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_L_Line",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_R_Line",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_R_Line",
+    "location": {
+      "column": "15",
+      "line": "37",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_R_Line",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_L_Statics",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_L_Statics",
+    "location": {
+      "column": "17",
+      "line": "38",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_L_Statics",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_R_Statics",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_R_Statics",
+    "location": {
+      "column": "17",
+      "line": "39",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_R_Statics",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_L_Grow_Dir",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_L_Grow_Dir",
+    "location": {
+      "column": "16",
+      "line": "40",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_L_Grow_Dir",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_R_Grow_Dir",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_R_Grow_Dir",
+    "location": {
+      "column": "16",
+      "line": "41",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_R_Grow_Dir",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_X_Meet",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_X_Meet",
+    "location": {
+      "column": "14",
+      "line": "42",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_X_Meet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_X_Meet",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_X_Meet",
+    "location": {
+      "column": "14",
+      "line": "43",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_X_Meet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_L_Thres_Max",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_L_Thres_Max",
+    "location": {
+      "column": "14",
+      "line": "44",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_L_Thres_Max",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_R_Thres_Max",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_R_Thres_Max",
+    "location": {
+      "column": "14",
+      "line": "45",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_R_Thres_Max",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_L_Thres_Min",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_L_Thres_Min",
+    "location": {
+      "column": "14",
+      "line": "46",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_L_Thres_Min",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_R_Thres_Min",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_R_Thres_Min",
+    "location": {
+      "column": "14",
+      "line": "47",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_R_Thres_Min",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Adaptive_Thres_Average",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Adaptive_Thres_Average",
+    "location": {
+      "column": "14",
+      "line": "48",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Adaptive_Thres_Average",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Last_Adaptive_Thres_Average",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Last_Adaptive_Thres_Average",
+    "location": {
+      "column": "14",
+      "line": "49",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Last_Adaptive_Thres_Average",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@mt9v03x_image",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "mt9v03x_image",
+    "location": {
+      "column": "17",
+      "line": "51",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "mt9v03x_image",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Image_Use",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Image_Use",
+    "location": {
+      "column": "22",
+      "line": "52",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Image_Use",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Bin_Image",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Bin_Image",
+    "location": {
+      "column": "22",
+      "line": "53",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Bin_Image",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@image_01",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "image_01",
+    "location": {
+      "column": "14",
+      "line": "54",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "image_01",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Longest_White_Column_Left_site",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Longest_White_Column_Left_site",
+    "location": {
+      "column": "14",
+      "line": "58",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Longest_White_Column_Left_site",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Longest_White_Column_Left",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Longest_White_Column_Left",
+    "location": {
+      "column": "12",
+      "line": "59",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Longest_White_Column_Left",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Longest_White_Column_Right",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Longest_White_Column_Right",
+    "location": {
+      "column": "38",
+      "line": "59",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Longest_White_Column_Right",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@longest_White_Column",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "longest_White_Column",
+    "location": {
+      "column": "66",
+      "line": "59",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "longest_White_Column",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@longest_White_Column",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "longest_White_Column",
+    "location": {
+      "column": "66",
+      "line": "59",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "longest_White_Column",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@l_lose_value",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "l_lose_value",
+    "location": {
+      "column": "14",
+      "line": "60",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "l_lose_value",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@l_search_flag",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "l_search_flag",
+    "location": {
+      "column": "14",
+      "line": "61",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "l_search_flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Boundry_Start_Right",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Boundry_Start_Right",
+    "location": {
+      "column": "12",
+      "line": "62",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Boundry_Start_Right",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Boundry_Start_Left",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Boundry_Start_Left",
+    "location": {
+      "column": "32",
+      "line": "62",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Boundry_Start_Left",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Both_Lost_Time",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Both_Lost_Time",
+    "location": {
+      "column": "12",
+      "line": "63",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Both_Lost_Time",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Right_Lost_Flag",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Right_Lost_Flag",
+    "location": {
+      "column": "14",
+      "line": "64",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Right_Lost_Flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@l_line_x",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "l_line_x",
+    "location": {
+      "column": "14",
+      "line": "65",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "l_line_x",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@l_line_x_l",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "l_line_x_l",
+    "location": {
+      "column": "14",
+      "line": "66",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "l_line_x_l",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@top_junp_change_sign_num",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "top_junp_change_sign_num",
+    "location": {
+      "column": "14",
+      "line": "69",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "top_junp_change_sign_num",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GetOSTU",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "short GetOSTU(unsigned char (*)[94])",
+    "location": {
+      "column": "7",
+      "line": "71",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "GetOSTU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GetOSTU",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "short GetOSTU(unsigned char (*)[94])",
+    "location": {
+      "column": "7",
+      "line": "71",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "GetOSTU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Get_Bin_Image",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Get_Bin_Image(unsigned char)",
+    "location": {
+      "column": "6",
+      "line": "72",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Get_Bin_Image",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Get_Bin_Image",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Get_Bin_Image(unsigned char)",
+    "location": {
+      "column": "6",
+      "line": "72",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Get_Bin_Image",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Bin_Image_Filter",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Bin_Image_Filter(void)",
+    "location": {
+      "column": "6",
+      "line": "73",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Bin_Image_Filter",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Bin_Image_Filter",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Bin_Image_Filter(void)",
+    "location": {
+      "column": "6",
+      "line": "73",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Bin_Image_Filter",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Get_Use_Image",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Get_Use_Image(void)",
+    "location": {
+      "column": "6",
+      "line": "74",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Get_Use_Image",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Get_Use_Image",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Get_Use_Image(void)",
+    "location": {
+      "column": "6",
+      "line": "74",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Get_Use_Image",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Camera_All_Deal",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Camera_All_Deal(void)",
+    "location": {
+      "column": "6",
+      "line": "75",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Camera_All_Deal",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Camera_All_Deal",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Camera_All_Deal(void)",
+    "location": {
+      "column": "6",
+      "line": "75",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Camera_All_Deal",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Search_Left_and_Right_Lines",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Search_Left_and_Right_Lines(int (*)[94], int, int, int)",
+    "location": {
+      "column": "6",
+      "line": "76",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Search_Left_and_Right_Lines",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Search_Bottom_Line_OTSU",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Search_Bottom_Line_OTSU(int (*)[94], int, int, int)",
+    "location": {
+      "column": "6",
+      "line": "77",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Search_Bottom_Line_OTSU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Search_Border_OTSU",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Search_Border_OTSU(int (*)[94], int, int, int)",
+    "location": {
+      "column": "6",
+      "line": "78",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Search_Border_OTSU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@dou_Longest_White_Column",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void dou_Longest_White_Column(void)",
+    "location": {
+      "column": "6",
+      "line": "79",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "dou_Longest_White_Column",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@dou_Longest_White_Column",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void dou_Longest_White_Column(void)",
+    "location": {
+      "column": "6",
+      "line": "79",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "dou_Longest_White_Column",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Element_Judge",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Element_Judge(void)",
+    "location": {
+      "column": "7",
+      "line": "80",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Element_Judge",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Element_Judge",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Element_Judge(void)",
+    "location": {
+      "column": "7",
+      "line": "80",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "Element_Judge",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@My_ABS",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int My_ABS(int)",
+    "location": {
+      "column": "5",
+      "line": "81",
+      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
+    },
+    "name": "My_ABS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Defaults.h@1169@macro@_DLIB_DEFAULTS_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -12141,638 +13193,6 @@
       "path": "C:\\iar1\\arm\\inc\\c\\DLib_Defaults.h"
     },
     "name": "__WEAK_DEFS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Camera.h@28@macro@__CAMERA_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__CAMERA_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "__CAMERA_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Camera.h@84@macro@IMAGEH",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IMAGEH",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "IMAGEH",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Camera.h@136@macro@IMAGEW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IMAGEW",
-    "location": {
-      "column": "9",
-      "line": "7",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "IMAGEW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Camera.h@188@macro@LCDH",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LCDH",
-    "location": {
-      "column": "9",
-      "line": "8",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "LCDH",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Camera.h@245@macro@LCDW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LCDW",
-    "location": {
-      "column": "9",
-      "line": "9",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "LCDW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Camera.h@302@macro@MT9V034_IMAGEH",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "MT9V034_IMAGEH",
-    "location": {
-      "column": "9",
-      "line": "10",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "MT9V034_IMAGEH",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Camera.h@375@macro@MT9V034_IMAGEW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "MT9V034_IMAGEW",
-    "location": {
-      "column": "9",
-      "line": "11",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "MT9V034_IMAGEW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@YUAN_SU",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "YUAN_SU",
-    "location": {
-      "column": "8",
-      "line": "14",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "members": [
-      {
-        "ID": "c:@S@YUAN_SU@FI@barrier",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "barrier",
-        "location": {
-          "column": "12",
-          "line": "15",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-        },
-        "name": "barrier",
-        "origin": "user_include",
-        "scope": "YUAN_SU"
-      },
-      {
-        "ID": "c:@S@YUAN_SU@FI@straight",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "straight",
-        "location": {
-          "column": "12",
-          "line": "16",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-        },
-        "name": "straight",
-        "origin": "user_include",
-        "scope": "YUAN_SU"
-      },
-      {
-        "ID": "c:@S@YUAN_SU@FI@right_right_angle_bend",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "right_right_angle_bend",
-        "location": {
-          "column": "12",
-          "line": "17",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-        },
-        "name": "right_right_angle_bend",
-        "origin": "user_include",
-        "scope": "YUAN_SU"
-      },
-      {
-        "ID": "c:@S@YUAN_SU@FI@ten",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "ten",
-        "location": {
-          "column": "12",
-          "line": "18",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-        },
-        "name": "ten",
-        "origin": "user_include",
-        "scope": "YUAN_SU"
-      },
-      {
-        "ID": "c:@S@YUAN_SU@FI@left_right_angle_bend",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "left_right_angle_bend",
-        "location": {
-          "column": "12",
-          "line": "19",
-          "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-        },
-        "name": "left_right_angle_bend",
-        "origin": "user_include",
-        "scope": "YUAN_SU"
-      }
-    ],
-    "name": "YUAN_SU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@road_type",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "road_type",
-    "location": {
-      "column": "23",
-      "line": "22",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "road_type",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@mt9v03x_image",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "mt9v03x_image",
-    "location": {
-      "column": "17",
-      "line": "24",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "mt9v03x_image",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Image_Use",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Image_Use",
-    "location": {
-      "column": "22",
-      "line": "25",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Image_Use",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Bin_Image",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Bin_Image",
-    "location": {
-      "column": "22",
-      "line": "26",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Bin_Image",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@image_01",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "image_01",
-    "location": {
-      "column": "14",
-      "line": "27",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "image_01",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Longest_White_Column_Left_site",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Longest_White_Column_Left_site",
-    "location": {
-      "column": "14",
-      "line": "29",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Longest_White_Column_Left_site",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Longest_White_Column_Left",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Longest_White_Column_Left",
-    "location": {
-      "column": "12",
-      "line": "30",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Longest_White_Column_Left",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Longest_White_Column_Right",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Longest_White_Column_Right",
-    "location": {
-      "column": "38",
-      "line": "30",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Longest_White_Column_Right",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@l_search_flag",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "l_search_flag",
-    "location": {
-      "column": "14",
-      "line": "32",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "l_search_flag",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Boundry_Start_Right",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Boundry_Start_Right",
-    "location": {
-      "column": "12",
-      "line": "33",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Boundry_Start_Right",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Boundry_Start_Left",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Boundry_Start_Left",
-    "location": {
-      "column": "32",
-      "line": "33",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Boundry_Start_Left",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Both_Lost_Time",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Both_Lost_Time",
-    "location": {
-      "column": "12",
-      "line": "34",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Both_Lost_Time",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@Right_Lost_Flag",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Right_Lost_Flag",
-    "location": {
-      "column": "14",
-      "line": "35",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Right_Lost_Flag",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@l_line_x",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "l_line_x",
-    "location": {
-      "column": "14",
-      "line": "36",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "l_line_x",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@l_line_x_l",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "l_line_x_l",
-    "location": {
-      "column": "14",
-      "line": "37",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "l_line_x_l",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GetOSTU",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "short GetOSTU(unsigned char (*)[94])",
-    "location": {
-      "column": "7",
-      "line": "40",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "GetOSTU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GetOSTU",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "short GetOSTU(unsigned char (*)[94])",
-    "location": {
-      "column": "7",
-      "line": "40",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "GetOSTU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Get_Bin_Image",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Get_Bin_Image(unsigned char)",
-    "location": {
-      "column": "6",
-      "line": "41",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Get_Bin_Image",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Get_Bin_Image",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Get_Bin_Image(unsigned char)",
-    "location": {
-      "column": "6",
-      "line": "41",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Get_Bin_Image",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Bin_Image_Filter",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Bin_Image_Filter(void)",
-    "location": {
-      "column": "6",
-      "line": "42",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Bin_Image_Filter",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Bin_Image_Filter",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Bin_Image_Filter(void)",
-    "location": {
-      "column": "6",
-      "line": "42",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Bin_Image_Filter",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Get_Use_Image",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Get_Use_Image(void)",
-    "location": {
-      "column": "6",
-      "line": "43",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Get_Use_Image",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Get_Use_Image",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Get_Use_Image(void)",
-    "location": {
-      "column": "6",
-      "line": "43",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Get_Use_Image",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Camera_All_Deal",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Camera_All_Deal(void)",
-    "location": {
-      "column": "6",
-      "line": "44",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Camera_All_Deal",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Camera_All_Deal",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Camera_All_Deal(void)",
-    "location": {
-      "column": "6",
-      "line": "44",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Camera_All_Deal",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Search_Left_and_Right_Lines",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Search_Left_and_Right_Lines(int (*)[94], int, int, int)",
-    "location": {
-      "column": "6",
-      "line": "45",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Search_Left_and_Right_Lines",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Search_Bottom_Line_OTSU",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Search_Bottom_Line_OTSU(int (*)[94], int, int, int)",
-    "location": {
-      "column": "6",
-      "line": "46",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Search_Bottom_Line_OTSU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Search_Border_OTSU",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Search_Border_OTSU(int (*)[94], int, int, int)",
-    "location": {
-      "column": "6",
-      "line": "47",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Search_Border_OTSU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@dou_Longest_White_Column",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void dou_Longest_White_Column(void)",
-    "location": {
-      "column": "6",
-      "line": "48",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "dou_Longest_White_Column",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@dou_Longest_White_Column",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void dou_Longest_White_Column(void)",
-    "location": {
-      "column": "6",
-      "line": "48",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "dou_Longest_White_Column",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Element_Judge",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Element_Judge(void)",
-    "location": {
-      "column": "7",
-      "line": "49",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Element_Judge",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Element_Judge",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Element_Judge(void)",
-    "location": {
-      "column": "7",
-      "line": "49",
-      "path": "C:\\Users\\CSH\\Desktop\\CYT4BB7_Library-master\\Example\\Motherboard_Demo\\Smart_Car\\Smart_Car CODE\\code\\Camera.h"
-    },
-    "name": "Element_Judge",
     "origin": "user_include",
     "scope": null
   },
@@ -13575,6 +13995,20 @@
     "scope": null
   },
   {
+    "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "location": {
+      "column": "11",
+      "line": "42",
+      "path": "C:\\iar1\\arm\\inc\\c\\ycheck.h"
+    },
+    "name": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:ysizet.h@111@macro@_YSIZET_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -13655,20 +14089,6 @@
       "path": "C:\\iar1\\arm\\inc\\c\\ysizet.h"
     },
     "name": "__data_size_t",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
-    "location": {
-      "column": "11",
-      "line": "42",
-      "path": "C:\\iar1\\arm\\inc\\c\\ycheck.h"
-    },
-    "name": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
     "origin": "user_include",
     "scope": null
   },

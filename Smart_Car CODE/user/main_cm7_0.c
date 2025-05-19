@@ -62,21 +62,25 @@
 
 // **************************** 代码区域 ****************************
 
-#define PIT_NUM                          (PIT_CH0 )                             // 使用的周期中断编号
+#define PIT_NUM                 (PIT_CH0 )                                     // 使用的周期中断编号
 #define PIT1                             (PIT_CH1 )                             // 使用的周期中断编号
 
-extern int16 top_junp_change_sign_num, bottom_junp_change_sign_num, left_junp_change_sign_num, right_junp_change_sign_num;
 extern int16 l_line_x[LCDH], r_line_x[LCDH]; 
 extern int16 l_line_x_l[LCDH], r_line_x_l[LCDH];
-int i;
-extern struct YUAN_SU road_type;
 
-int main()
+
+int i;
+
+/**********元素处理结构体**********/
+extern struct YUAN_SU road_type ; 
+
+ int main(void)
 {
     clock_init(SYSTEM_CLOCK_250M); 	// 时钟配置及系统初始化<务必保留>
-    debug_init();                          // 调试串口信息初始化
-    
+    debug_init();                   // 调试串口信息初始化
     // 此处编写用户代码 例如外设初始化代码等
+    
+ 
     
     gpio_init(DIR1, GPO, GPIO_HIGH, GPO_PUSH_PULL);                             // GPIO 初始化为输出 默认上拉输出高
     gpio_init(DIR2, GPO, GPIO_HIGH, GPO_PUSH_PULL);                             // GPIO 初始化为输出 默认上拉输出高
@@ -88,56 +92,73 @@ int main()
     encoder_dir_init(ENCODER_DIR3, ENCODER_DIR_PULSE3, ENCODER_DIR_DIR3);       // 初始化编码器模块与引脚 带方向增量编码器模式
     encoder_dir_init(ENCODER_DIR4, ENCODER_DIR_PULSE4, ENCODER_DIR_DIR4);       // 初始化编码器模块与引脚 带方向增量编码器模式
     
+    
     tft180_set_dir(TFT180_CROSSWISE);                                           // 需要先横屏 不然显示不下
     tft180_init();
-    mt9v03x_init();
-    
+    mt9v03x_init ();
+       
+                                   
     imu660ra_init();
     IMU_Offset_Init(IMU660RA);
-
+    
     pit_ms_init(PIT_NUM, 10);      // 初始化 CCU6_0_CH0 为周期中断 10ms 周期 
     pit_ms_init(PIT1, 10);      // 初始化 CCU6_0_CH0 为周期中断 10ms 周期
     
+    //PID初始化
+    
+    PID_init(&PID_Angle,-0.1,0,0);
+    
+    PID_init(&PID_Left,40,0.2,0.5);
+    PID_init(&PID_right,40,0.2,0.5);
+    
+    
+    
+    
+
     // 此处编写用户代码 例如外设初始化代码等
     while(true)
     {
         // 此处编写需要循环执行的代码
 
-       if(mt9v03x_finish_flag)
-        {
-            mt9v03x_finish_flag = 0;
-            Get_Use_Image();
-            Get_Bin_Image(0);
-            Bin_Image_Filter();
-            dou_Longest_White_Column();
-            tft180_displayimage03x((const uint8 *)image_01, 94, 60);
-            Element_Judge();
-        }
-
-            for( i=0;i<58;i++)
-            {  
-              tft180_draw_point(r_line_x_l[i],i,RGB565_BLUE);
-              tft180_draw_point(r_line_x_l[i-1],i,RGB565_BLUE);
-               tft180_draw_point(l_line_x_l[i],i,RGB565_BLUE);
-               tft180_draw_point(l_line_x_l[i+1],i,RGB565_BLUE);
-               tft180_draw_point((l_line_x_l[i] + r_line_x_l[i])/2,i,RGB565_PINK); 
-               
-                if(i>=58)
+//        tft180_show_float(20, 16*5, New_angle, 4, 3);
+//        tft180_show_int(20, 16*6, Error_Angle.time , 5);
+      
+         Camera_All_Deal();  
+         tft180_show_uint(100, 16,  Adaptive_L_Start_Point[0], 3);
+         tft180_show_uint(100, 32,  Adaptive_R_Start_Point[0], 3);
+         tft180_show_uint(100, 48,  road_type.left_right_angle_bend, 3);
+         tft180_show_uint(100, 64,  road_type.right_right_angle_bend, 3);
+         tft180_show_uint(100, 80,  Adaptive_Thres_Average, 3);
+//         tft180_show_uint(130, 16,  L_Average_Thres, 3);
+//         tft180_show_uint(130, 32,  R_Average_Thres, 3);
+            for( i=0; i < Adaptive_L_Statics; i++)
+            {
+                tft180_draw_point(Adaptive_L_Line[i][0], Adaptive_L_Line[i][1], RGB565_RED);
+                if(i >= Adaptive_L_Statics)
                 {
-                   i=0;
-                   break;
+                    i = 0;
+                    break;
+                }               
+            }
+ 
+            for( i=0; i < Adaptive_R_Statics; i++)
+            {
+                tft180_draw_point(Adaptive_R_Line[i][0], Adaptive_R_Line[i][1], RGB565_BLUE);
+                if(i >= Adaptive_R_Statics)
+                {
+                    i = 0;
+                    break;
                 }
-             }       
-//         tft180_show_uint(100, 80,  longest_White_Column_site, 6);
-         tft180_show_uint(100, 16,  top_junp_change_sign_num, 2);
-         tft180_show_uint(100, 32,  bottom_junp_change_sign_num, 2);
-         tft180_show_uint(100, 48,  left_junp_change_sign_num, 2);
-         tft180_show_uint(100, 64,  right_junp_change_sign_num, 2);
-         tft180_show_uint(130, 16,  road_type.straight, 1);
-         tft180_show_uint(130, 32,  road_type.ten, 1);
-         tft180_show_uint(130, 48,  road_type.left_right_angle_bend, 1);
-         tft180_show_uint(130, 64,  road_type.right_right_angle_bend, 1);
-         tft180_show_uint(130, 80,  road_type.ben_ring, 1);
+            }
+//            for( i=0; i < (Adaptive_R_Statics + Adaptive_L_Statics) / 2; i++)
+//            {
+//                tft180_draw_point((Adaptive_R_Line[i][0] + Adaptive_L_Line[i][0]) / 2, (Adaptive_R_Line[i][1] + Adaptive_L_Line[i][1]) / 2, RGB565_YELLOW);
+//                if(i >= (Adaptive_R_Statics + Adaptive_L_Statics) / 2)
+//                {
+//                    i = 0;
+//                    break;
+//                }
+//            }
         // 此处编写需要循环执行的代码
     }
 }

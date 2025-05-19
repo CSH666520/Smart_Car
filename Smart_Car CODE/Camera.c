@@ -16,9 +16,44 @@ unsigned char Image_Use[LCDH][LCDW];
 /** ¶şÖµ»¯ºóÓÃÓÚÆÁÄ»ÏÔÊ¾µÄÊı¾İ */
 unsigned char Bin_Image[LCDH][LCDW];
 
+//int16 top_junp_change_sign_num= 0, bottom_junp_change_sign_num = 0, left_junp_change_sign_num = 0, right_junp_change_sign_num = 0;//ÓÃÓÚ¼ÇÂ¼ÉÏÏÂ×óÓÒºÚ°×Ìø±äÊıÁ¿
+
+
 uint8 image_01[60][94];           //¶şÖµ»¯Í¼Ïñ
 
-
+/**°ËÏòÃÔ¹¬·¨±äÁ¿**/
+uint8 Black_Box_Value_FFF = 50;
+uint8 Black_Box_Value_FF = 50;
+uint8 Black_Box_Value_F = 50;
+uint8 Black_Box_Value; 
+uint8 Compare_Value = 20;
+int Thres_Interfere = 0;
+int Thres_Num_Interfere = 25;//25¸öãĞÖµµã
+uint8 Start_Flag;
+uint8 l_x_start, l_y_start, r_x_start, r_y_start;        //°ËÏòÃÔ¹¬·¨ÆğÊ¼µã×ø±ê
+uint16_t L_Thres_Record[500];     //´¢´æãĞÖµÊı×é
+uint16_t R_Thres_Record[500];
+uint8 Adaptive_L_Start_Point[2];          //´æ´¢×ó²àÆğÊ¼µãµÄÊı×é£¨È«¾Ö±äÁ¿£©
+uint8 Adaptive_R_Start_Point[2];          //´æ´¢ÓÒ²àÆğÊ¼µãµÄÊı×é£¨È«¾Ö±äÁ¿£©
+uint8_t record_gray_value[2];             //¼ÇÂ¼×óÓÒÆğµã»Ò¶ÈÖµ
+uint8_t Black_Box_Value_1;
+uint8 L_Border[200];     //´æ´¢×ó²àÒ»Î¬±ßÏßµÄÊı×é
+uint8 R_Border[200];     //´æ´¢ÓÒ²àÒ»Î¬±ßÏßµÄÊı×é
+uint16 Adaptive_L_Line[600][2];             //´æ·Å×ó²à±ßÏßµÄ¶şÎ¬Êı×é
+uint16 Adaptive_R_Line[600][2];             //´æ·ÅÓÒ²à±ßÏßµÄ¶şÎ¬Êı×é
+uint16_t Adaptive_L_Statics;                //¼ÇÂ¼×ó±ß±ßÏßµãµÄ¸öÊı
+uint16_t Adaptive_R_Statics;                //¼ÇÂ¼ÓÒ±ß±ßÏßµãµÄ¸öÊı
+int16_t Adaptive_L_Grow_Dir[500];                //´æ·Å×ó²à±ßÏßÃ¿¸öµãµÄÉú³¤·½Ïò
+int16_t Adaptive_R_Grow_Dir[500];                //´æ·ÅÓÒ²à±ßÏßÃ¿¸öµãµÄÉú³¤·½Ïò
+uint8 Adaptive_X_Meet;              //¼ÇÂ¼×óÓÒÁ½²àÅÀÏßÏàÓöµãµÄX×ø±ê
+uint8 Adaptive_Y_Meet;              //¼ÇÂ¼×óÓÒÁ½²àÅÀÏßÏàÓöµãµÄY×ø±ê
+uint8 Adaptive_L_Thres_Max = 0;     //×ó²àãĞÖµ×î´óÖµ
+uint8 Adaptive_R_Thres_Max = 0;     //ÓÒ²àãĞÖµ×î´óÖµ
+uint8 Adaptive_L_Thres_Min = 0;     //×ó²àãĞÖµ×îĞ¡Öµ
+uint8 Adaptive_R_Thres_Min = 0;     //ÓÒ²àãĞÖµ×îĞ¡Öµ
+uint8 Adaptive_Thres_Average = 0;   //ãĞÖµ¾ùÖµ
+uint8 Last_Adaptive_Thres_Average = 0;  //ÓÃÓÚãĞÖµ¾ùÖµÂË²¨
+uint16_t Image_Num;  //Í¼Ïñ¸öÊı
 
 int16 Longest_White_Column_Left_site,Longest_White_Column_Right_site, longest_White_Column_site;//ËÑÏß±äÁ¿
 int Longest_White_Column_Left,Longest_White_Column_Right;
@@ -31,6 +66,40 @@ int16 l_line_x[LCDH], r_line_x[LCDH], m_line_x[LCDH];        //´¢´æÔ­Ê¼Í¼ÏñµÄ×óÓ
 int16 l_line_x_l[LCDH], r_line_x_l[LCDH], m_line_x_l[LCDH];  //´¢´æÔ­Ê¼Í¼ÏñµÄ×óÓÒ±ß½çµÄÁĞÊı£¬ÓÃÓÚÆ«²î¼ÆËã
 int search_line_end = 5;//²»ÄÜÎªÁã£¬Ô­ÒòÔİÎ´²é
 
+/******************×ÔÊÊÓ¦·½ÏòÃÔ¹¬²ÎÊı************************/
+ 
+const int8 L_Face_Dir[4][2] = {{0,-1},{1,0},{0,1},{-1,0}};  //×ó²àÃÔ¹¬ÃæÏò
+//  0
+//3   1
+//  2
+ 
+const int8 L_Face_Dir_L[4][2] = {{-1,-1},{1,-1},{1,1},{-1,1}};  //×ó²àÃæÏòµÄ×óÇ°·½
+//0   1
+//
+//3   2
+ 
+const int8 R_Face_Dir[4][2] = {{0,-1},{1,0},{0,1},{-1,0}};  //ÓÒ²àÃÔ¹¬ÃæÏò
+//  0
+//3   1
+//  2
+ 
+const int8 R_Face_Dir_R[4][2] = {{1,-1},{1,1},{-1,1},{-1,-1}};  //ÓÒ²àÃæÏòµÄÓÒÇ°·½
+//3   0
+//
+//2   1
+ 
+const int8 Square_0[25][2] = {              //Ò»¸ö5 * 5µÄ¾ØÕó£¬ÓÃÀ´ÇóÖĞĞÄµãÖÜÎ§µÄ¾Ö²¿ãĞÖµ£¨¾Ö²¿ãĞÖµ£©
+{-2,-2},{-1,-2},{0,-2},{+1,-2},{+2,-2},
+{-2,-1},{-1,-1},{0,-1},{+1,-1},{+2,-1},
+{-2,-0},{-1, 0},{0, 0},{+1, 0},{+2,-0},
+{-2,+1},{-1,+1},{0,+1},{+1,+1},{+2,+1},
+{-2,+2},{-1,+2},{0,+2},{+1,+2},{+2,+2}
+};
+ 
+//ÃÔ¹¬µ¥²àÍ£Ö¹ÅÀÏß±êÖ¾Î»
+uint8 L_Stop_Flag;
+uint8 R_Stop_Flag;
+
 /**********ÔªËØ´¦Àí½á¹¹Ìå**********/
 struct YUAN_SU road_type = {     
       .barrier                       = 0,         //ºá¶Ï
@@ -38,8 +107,22 @@ struct YUAN_SU road_type = {
       .right_right_angle_bend        = 0,         //ÓÒÖ±½ÇÍäµÀ
       .ten                           = 0,         //Ê®×Ö
       .left_right_angle_bend         = 0,         //×óÖ±½ÇÍäµÀ
+      .ben_ring                      = 0,         //±½»·
       
 };
+
+/******************************¾ø¶ÔÖµº¯Êı****************************/
+int My_ABS(int num)      //°ËÏòÃÔ¹¬·¨ËùÓÃ
+{
+    if (num < 0) 
+    {
+        return -num;
+    } 
+    else 
+    {
+        return num;
+    } 
+}
 
 /*************************************************************************
  *  º¯ÊıÃû³Æ£ºshort GetOSTU (unsigned char tmImage[LCDH][LCDW])
@@ -156,12 +239,12 @@ void Get_Bin_Image (unsigned char mode)
             if (Image_Use[i][j] > Threshold) //ÊıÖµÔ½´ó£¬ÏÔÊ¾µÄÄÚÈİÔ½¶à£¬½ÏÇ³µÄÍ¼ÏñÒ²ÄÜÏÔÊ¾³öÀ´
             {
                 Bin_Image[i][j] = 1;
-                image_01[i][j] = 0;  //°×
+                image_01[i][j] = 255;  //°×
             }
             else
             {
                 Bin_Image[i][j] = 0;
-                image_01[i][j] = 255;  //ºÚ
+                image_01[i][j] = 0;  //ºÚ
             }
         }
     }
@@ -223,20 +306,6 @@ void Get_Use_Image(void)
     }
 }
 
-/*************************************************************************
-Í¼Ïñ×îºó×Ü´¦Àí
-*************************************************************************/
-void Camera_All_Deal(void)
-{
-    if(mt9v03x_finish_flag)
-    {
-        mt9v03x_finish_flag = 0;
-        Get_Use_Image();
-        Get_Bin_Image(0);
-        Bin_Image_Filter();
-        ips114_displayimage03x((const uint8 *)image_01, LCDH, LCDW);
-    }
-}
 /************************************************************************
 °ËÁÚÓòÕÒµ×²¿±ßÏß
 *************************************************************************/
@@ -529,7 +598,7 @@ void dou_Longest_White_Column(void)//×î³¤°×ÁĞÑ²Ïß
     {
         for(j=LCDH-1;j>=0;j--)
         {
-            if(image_01[j][i] != 0x00&&image_01[j-1][i] != 0x00)
+            if(image_01[j][i] == 0x00&&image_01[j-1][i] == 0x00)
             {
                 break;
             }
@@ -552,7 +621,7 @@ void dou_Longest_White_Column(void)//×î³¤°×ÁĞÑ²Ïß
     {
         for (j = longest_White_Column_site; j <= LCDW - 1 - 2; j++)
         {
-            if (image_01[i][j] ==0x00 && image_01[i][j + 1] != 0x00 && image_01[i][j + 2] != 0x00)//°×ºÚºÚ£¬ÕÒµ½ÓÒ±ß½ç
+            if (image_01[i][j] != 0x00 && image_01[i][j + 1] == 0x00 && image_01[i][j + 2] == 0x00)//°×ºÚºÚ£¬ÕÒµ½ÓÒ±ß½ç
             {
                 r_line_x[i] = j;
                 r_line_x_l[i] = j;
@@ -570,7 +639,7 @@ void dou_Longest_White_Column(void)//×î³¤°×ÁĞÑ²Ïß
         }
         for (j = longest_White_Column_site; j >= 0 + 2; j--)//Íù×ó±ßÉ¨Ãè
         {
-            if (image_01[i][j] ==0x00 && image_01[i][j - 1] != 0x00 && image_01[i][j - 2] != 0x00)//ºÚºÚ°×ÈÏÎªµ½´ï×ó±ß½ç
+            if (image_01[i][j] != 0x00 && image_01[i][j - 1] == 0x00 && image_01[i][j - 2] == 0x00)//°×ºÚºÚÈÏÎªµ½´ï×ó±ß½ç
             {
                 l_line_x [i] = j;
                 l_line_x_l[i] = j;
@@ -606,107 +675,824 @@ void dou_Longest_White_Column(void)//×î³¤°×ÁĞÑ²Ïß
 //
 //     }  //Road_Wide[i]=r_line_x[i]-l_line_x[i];
 }
-/************************************************************************
-ÔªËØÅĞ¶Ï
-*************************************************************************/
-int16 top_junp_change_sign_num, bottom_junp_change_sign_num, left_junp_change_sign_num, right_junp_change_sign_num;//ÓÃÓÚ¼ÇÂ¼ÉÏÏÂ×óÓÒºÚ°×Ìø±äÊıÁ¿
+
+//»­ºÚ¿ò£¨±ØĞëÎªÒ»¸öÏñËØ¿í¶È£¬±ß½çÎñ±Ø¿Õ³öÒ»¸ñ£©
+/**
+* º¯Êı¹¦ÄÜ£º      Í¼Ïñ²¹ºÚ¿ò
+* ÌØÊâËµÃ÷£º      ×¢ÒâºÚ¿òÓë±ß½ç¼ä¸ôÒ»¸ñÏñËØ¿í¶È
+* ĞÎ  ²Î£º        uint8 black_box_value            ºÚ¿òµÄ»Ò¶ÈÖµ
+*                uint8(*image)[Image_X]            Òª²¹ºÚ¿òµÄÍ¼Ïñ
+*
+* Ê¾Àı£º          Draw_Black_Box(Black_Box_Value, Find_Line_Image);£»
+* ·µ»ØÖµ£º        ÎŞ
+*/
+void Draw_Black_Box(uint8 black_box_value, uint8(*image)[Image_X])          
+{
+    uint8 i,j;
+ 
+    Black_Box_Value_FFF = Black_Box_Value_FF;
+    Black_Box_Value_FF = Black_Box_Value_F;
+    Black_Box_Value_F = black_box_value;
+    black_box_value = (uint8_t)(0.5 * Black_Box_Value_F + 0.3 * Black_Box_Value_FF + 0.2 * Black_Box_Value_FFF);        //ÂË²¨
+    Black_Box_Value = black_box_value;
+    for(i = 1; i < 60; i++)
+    {
+        image[i][LCDW - 2] = black_box_value;
+        image[i][1] = black_box_value;
+    }
+    for(j = 1; j < LCDW - 2; j++)
+    {
+        image[1][j] = black_box_value;
+    }
+}
+
+/***********************************************************************************
+* º¯Êı¹¦ÄÜ£º      ²î±ÈºÍ
+* ÌØÊâËµÃ÷£º      ÓÃÓÚÅÀÏßËã·¨ÕÒÆğµã
+* ĞÎ  ²Î£º        int16 a                  ÊıÖµ½Ï´óµÄ»Ò¶ÈÖµ
+*                int16 b                   ÊıÖµ½ÏĞ¡µÄ»Ò¶ÈÖµ
+*                uint8 compare_value       ²î±ÈºÍãĞÖµ
+*
+* Ê¾Àı£º          Compare_Num(image[start_row][i + 5], image[start_row][i], Compare_Value)£»
+* ·µ»ØÖµ£º        ´óÓÚãĞÖµ·µ»Ø1£¬·ñÔò·µ»Ø0.
+*/
+int16 Compare_Num(int16 a, int16 b, uint8 compare_value)               //****
+{
+    if((((a - b) << 7) / (a + b)) > compare_value)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+/*******************************************************************************************
+* º¯Êı¹¦ÄÜ£º      ÅÀÏßËã·¨ÕÒÆğµã
+* ÌØÊâËµÃ÷£º      ÎŞ
+* ĞÎ  ²Î£º        uint8 start_row              ÕÒÆğµãµÄÍ¼ÏñĞĞY×ø±ê
+*                uint8(*image)[Image_X]        Òª´¦ÀíµÄÍ¼Ïñ
+*                uint8 *l_start_point          ´æ´¢×ó²àÆğÊ¼µãµÄÊı×é£¨È«¾Ö±äÁ¿£©
+*                uint8 *r_start_point          ´æ´¢ÓÒ²àÆğÊ¼µãµÄÊı×é£¨È«¾Ö±äÁ¿£©
+*                uint8 l_border_x              Ïò×óÕÒÆğµãµÄ½ØÖ¹µã£¬×îÔ¶ÕÒµ½ÕâÀï¾ÍÍ£Ö¹
+*                uint8 r_border_x              ÏòÓÒÕÒÆğµãµÄ½ØÖ¹µã£¬×îÔ¶ÕÒµ½ÕâÀï¾ÍÍ£Ö¹
+*
+* Ê¾Àı£º          Get_Start_Point(Image_Y - 3, Find_Line_Image, Adaptive_L_Start_Point, Adaptive_R_Start_Point, 1, 78)
+* ·µ»ØÖµ£º        Á½±ß¶¼ÕÒµ½·µ»Ø1£¬·ñÔò·µ»Ø0.
+*/
+uint8 Get_Start_Point(uint8 start_row, uint8(*image)[Image_X], uint8 *l_start_point, uint8 *r_start_point, uint8 r_border_x)          //*****
+{
+    uint8 i = 0, j = 0;
+    uint8 L_Is_Found = 0, R_Is_Found = 0;   //ÕÒµ½ÆğµãÊ±¹Ò³ö¶ÔÓ¦±êÖ¾Î»
+//    uint8 Start_X  = 0;                     //ÆğÊ¼X×ø±ê£¬µÚÒ»ÕÅÍ¼ÏñÈ¡Í¼ÏñµÄĞĞÖĞµã£¬ºóĞøÍ¼ÏñÓÃÉÏÒ»´ÎÍ¼Ïñ×óÓÒÁ½²àÆğÊ¼µãµÄÖĞ¼äÖµ
+//    uint8 Start_Row_0 = 0;                  //ÆğÊ¼Y×ø±ê
+// 
+//    Start_Row_0 = start_row;
+//    Start_X = LCDW / 2;
+    //´ÓÖĞ¼äÍù×ó±ß£¬ÏÈÕÒÆğµã
+    for(j = 0; j < 10; j ++)        //Ö¸¶¨µÄĞĞÃ»ÕÒµ½ÆğµãÊ±£¬ÏòÉÏ×ßÒ»ĞĞ¼ÌĞøÕÒ£¬×î¶àÕÒÊ®ĞĞ
+    {
+        l_start_point[1] = start_row;//y
+        r_start_point[1] = start_row;//y
+// 
+//        if(Start_Flag == 0)       //µÚÒ»ÕÅÍ¼ÏñºÍÓöµ½°ßÂíÏßÊ±£¬ÆğÊ¼X×ø±êÑ¡ÓÃÍ¼ÏñµÄĞĞÖĞµã
+//        {
+//            Start_X = LCDW / 2;
+//        }
+//        else
+//        {//            Start_X = (l_start_point[0] + r_start_point[0]) / 2;    //·ñÔòÆğÊ¼X×ø±êÓÃÉÏÒ»´ÎÍ¼Ïñ×óÓÒÁ½²àÆğÊ¼µãµÄÖĞ¼äÖµ
+
+//        }
+            for (i = 3; i < r_border_x ; i++)      //ÏòÓÒÕÒ×óÆğÊ¼µã
+            {
+                if (Compare_Num(image[start_row][i + 1], image[start_row][i], Compare_Value))//²î±ÈºÍÎªÕæ
+                {
+                    {
+                        l_start_point[0] = i;   //ÕÒµ½ºó¼ÇÂ¼X×ø±ê
+                        record_gray_value[0]=image[start_row][i];
+                        L_Is_Found = 1;         //¹Ò³öÕÒ¼û±êÖ¾Î»
+                        break;
+                    }
+                }
+            }
+ 
+            for (i = l_start_point[0] + 2; i < r_border_x ; i++)      //Ïò×óÕÒÓÒÆğÊ¼µã
+            {
+                if (Compare_Num(image[start_row][i], image[start_row][i + 1], Compare_Value))//²î±ÈºÍÎªÕæ
+                {
+                    {
+                        r_start_point[0] = i + 1;
+                        record_gray_value[1]=image[start_row][i+1];
+                        R_Is_Found = 1;
+                        break;
+                    }
+                }
+            }
+            if(L_Is_Found && R_Is_Found)
+            {
+                Start_Flag = 1;    //ÊÇ·ñÎªµÚÒ»ÕÅÍ¼Ïñ±êÖ¾Î»
+                return 1;
+            }
+            else
+            {
+                start_row = start_row - 1;      //µ±´ËĞĞÓĞÒ»²àÃ»ÕÒµ½£¬¾ÍÏòÉÏÒÆ¶¯Ò»ĞĞÖØĞÂÕÒ
+            }
+    }
+}
+
+/*************************************************************************
+ *  º¯ÊıÃû³Æ£ºvoid labyrinth_findline_OSTU(void)
+ *  ¹¦ÄÜËµÃ÷£º×ÔÊÊÓ¦°ËÏîÏòÃÔ¹¬·¨
+ *  ²ÎÊıËµÃ÷£ºÎŞ
+ *  º¯Êı·µ»Ø£ºÎŞ
+ *  ĞŞ¸ÄÊ±¼ä£º2025Äê5ÔÂ13ÈÕ
+ *************************************************************************/                                 
+
+/******
+* º¯Êı¹¦ÄÜ£º      ÇóÈ¡ÈüµÀ¶şÎ¬Êı×é±ßÏß
+* ÌØÊâËµÃ÷£º      »ùÓÚÉÏ½»´úÂëµÄ×ÔÊÊÓ¦ÃÔ¹¬ÓÅ»¯ºóµÄ×ÔÊÊÓ¦°ËÏòÃÔ¹¬
+* ĞÎ  ²Î£º        uint16 Break_Flag         ×î´óÑ­»·´ÎÊı£¬·ÀÖ¹¿¨ËÀ³ÌĞò£¬Ò»°ãÎª3~4±¶Í¼Ïñ¿í¶È
+*                uint8(*image)[Image_X]     ÌáÈ¡±ßÏßµÄÍ¼Ïñ1
+*                uint8(*l_line)[2]          ´æ·Å×ó²à±ßÏßµÄ¶şÎ¬Êı×é1
+*                uint8(*r_line)[2]          ´æ·ÅÓÒ²à±ßÏßµÄ¶şÎ¬Êı×é1
+*                int8 *l_dir                ´æ·Å×ó²à±ßÏßÃ¿¸öµãµÄÉú³¤·½Ïò1
+*                int8 *r_dir                ´æ·ÅÓÒ²à±ßÏßÃ¿¸öµãµÄÉú³¤·½Ïò1
+*                uint16 *l_stastic          ¼ÇÂ¼×ó²à±ßÏßµãµÄ¸öÊı1
+*                uint16 *r_stastic          ¼ÇÂ¼ÓÒ²à±ßÏßµãµÄ¸öÊı1
+*                uint8 *x_meet              ¼ÇÂ¼×óÓÒÁ½²àÅÀÏßÏàÓöµãµÄX×ø±ê1
+*                uint8 *y_meet              ¼ÇÂ¼×óÓÒÁ½²àÅÀÏßÏàÓöµãµÄY×ø±ê1
+*                uint8 l_start_x            ×ó²àÅÀÏßÆğÊ¼µãµÄX×ø±ê
+*                uint8 l_start_y            ×ó²àÅÀÏßÆğÊ¼µãµÄY×ø±ê
+*                uint8 r_start_x            ÓÒ²àÅÀÏßÆğÊ¼µãµÄX×ø±ê
+*                uint8 r_start_y            ÓÒ²àÅÀÏßÆğÊ¼µãµÄY×ø±ê
+*                uint8 clip_value           ¼ÆËãÃ¿¸öãĞÖµÊ±Ïà¼ÓµÄ¾­ÑéÖµ£¬Ò»°ãÎª-5 ~ 5£¬±ÜÃâÇ¿ĞĞ·Ö¸î£¬¿ÉÖ±½ÓÉèÎª0
+*
+* Ê¾Àı£º         Dir_Labyrinth_5((uint16)Use_Num, Find_Line_Image, Adaptive_L_Line, Adaptive_R_Line, Adaptive_L_Grow_Dir, Adaptive_R_Grow_Dir, &Adaptive_L_Statics, &Adaptive_R_Statics, &Adaptive_X_Meet, &Adaptive_Y_Meet,
+                   Adaptive_L_Start_Point[0], Adaptive_L_Start_Point[1], Adaptive_R_Start_Point[0], Adaptive_R_Start_Point[1], 0);
+* ·µ»ØÖµ£º        ÎŞ
+*/
+
+void Dir_Labyrinth_5(uint16 Break_Flag, uint8(*image)[Image_X], uint16(*l_line)[2], uint16(*r_line)[2], int16 *l_dir, int16 *r_dir, uint16 *l_stastic, uint16 *r_stastic, uint8 *x_meet, uint8 *y_meet,
+                     uint8 l_start_x, uint8 l_start_y, uint8 r_start_x, uint8 r_start_y, uint8 clip_value)
+{
+    uint8 j = 0;
+ 
+    L_Stop_Flag = 0;
+    R_Stop_Flag = 0;
+//×ó±ß±äÁ¿
+    uint8  L_Center_Point[2] = {0};     //´æ·ÅÃ¿´ÎÕÒµ½µÄXY×ø±ê
+    uint16 L_Data_Statics = 0;          //Í³¼Æ×ó±ßÕÒµ½µÄ±ßÏßµãµÄ¸öÊı
+ 
+    uint8  L_Front_Value = 0;           //×ó²à ÃæÏòµÄÇ°·½µãµÄ»Ò¶ÈÖµ
+    uint8  L_Front_L_Value = 0;         //×ó²à ÃæÏòµÄ×óÇ°·½µãµÄ»Ò¶ÈÖµ
+ 
+    uint8  L_Dir = 0;                   //´Ë²ÎÊıÓÃÓÚ×ªÏò
+    uint8  L_Turn_Num = 0;              //¼ÇÂ¼×ªÏò´ÎÊı£¬ÈôÖĞĞÄµãÇ°ºó×óÓÒ¶¼ÊÇºÚÉ«ÏñËØ£¬¾Í»áÔÚÒ»¸öµã×ªÏòËÄ´Î£¬¼ÇÂ¼µ½ËÄ´ÎÊ±ÍË³öÑ­»··ÀÖ¹¿¨ËÀ³ÌĞò
+    uint16 L_Pixel_Value_Sum = 0;       //ÖĞĞÄµãÓëÖÜÎ§24¸öµãµÄÏñËØÖµºÍ
+    float L_Thres = 0;                 //¾Ö²¿ãĞÖµ,¼´L_Pixel_Value_Sum / 25
+ 
+//ÓÒ±ß±äÁ¿
+    uint8  R_Center_Point[2] = {0};     //´æ·ÅÃ¿´ÎÕÒµ½µÄXY×ø±ê
+    uint16 R_Data_Statics = 0;          //Í³¼ÆÓÒ±ßÕÒµ½µÄ±ßÏßµãµÄ¸öÊı
+ 
+    uint8  R_Front_Value = 0;           //ÓÒ²à ÃæÏòµÄÇ°·½µãµÄ»Ò¶ÈÖµ
+    uint8  R_Front_R_Value = 0;         //ÓÒ²à ÃæÏòµÄ×óÇ°·½µãµÄ»Ò¶ÈÖµ
+ 
+    uint8  R_Dir = 0;                   //´Ë²ÎÊıÓÃÓÚ×ªÏò
+    uint8  R_Turn_Num = 0;              //¼ÇÂ¼×ªÏò´ÎÊı£¬ÈôÖĞĞÄµãÇ°ºó×óÓÒ¶¼ÊÇºÚÉ«ÏñËØ£¬¾Í»áÔÚÒ»¸öµã×ªÏòËÄ´Î£¬¼ÇÂ¼µ½ËÄ´ÎÊ±ÍË³öÑ­»··ÀÖ¹¿¨ËÀ³ÌĞò
+    uint16 R_Pixel_Value_Sum = 0;       //ÖĞĞÄµãÓëÖÜÎ§24¸öµãµÄÏñËØÖµºÍ
+    float R_Thres = 0;                 //¾Ö²¿ãĞÖµ
+ 
+//µÚÒ»´Î¸üĞÂ×ø±êµã  ½«ÕÒµ½µÄÆğµãÖµ´«½øÀ´
+    L_Center_Point[0] = l_start_x + 1;//x
+    L_Center_Point[1] = l_start_y;//y
+    R_Center_Point[0] = r_start_x - 1;//x
+    R_Center_Point[1] = r_start_y;//y
+ 
+    //¿ªÆô·½ÏòÃÔ¹¬Ñ­»·
+    while (Break_Flag--)
+    {
+         //×ó±ß
+        //ÅĞ¶¨³öËÀÇøºó£¬¹Ò³öÍ£Ö¹±êÖ¾Î»£¬µ¥²àÅÀÏßÍ£Ö¹¡£
+        if(L_Stop_Flag == 0)
+        {
+            l_line[L_Data_Statics][0] = L_Center_Point[0];  //ÕÒµ½µÄÖĞĞÄµãX×ø±ê¼ÆÈë×ó±ßÏßÊı×é
+            l_line[L_Data_Statics][1] = L_Center_Point[1];  //ÕÒµ½µÄÖĞĞÄµãY×ø±ê¼ÆÈë×ó±ßÏßÊı×é
+ 
+            if(L_Data_Statics != 0)
+            {
+                switch(l_dir[L_Data_Statics - 1])  //ÏÂÃæÕâÒ»Ûç¿ÉÒÔ¸ù¾İÉÏÒ»¸öµãµÄÉú³¤·½Ïò´ó·ùÓÅ»¯ÅÀÏßÊ±¼ä
+                {
+                    //´ÓµÚ¶ş¸öµã¿ªÊ¼£¬µÚÒ»¸öµãµÄãĞÖµÒª25¸öµãÈ«²¿¼ÓÒ»±é
+                    //µ±ºáÏò»ò×İÏòÉú³¤Ê±£¬½«Ô­ÏÈµÄ25´Î¼Ó·¨ÔËËã¼ò»¯ÎªÊ®´Î¼ÆËã
+                    //µ±Ğ±ÏòÉú³¤Ê±£¬½«Ô­ÏÈµÄ25´Î¼Ó·¨¼ÆËã¼ò»¯ÎªÊ®°Ë´ÎÔËËã
+                    //¿ÉÒÔ»­³öÍ¼À´£¬¸ú×Å´úÂë×ß¼¸±é£¬¾Í¿ÉÒÔºÜ¿ìËÙµÄÀí½â
+                    case 1:
+                    {
+                        L_Pixel_Value_Sum = L_Pixel_Value_Sum - image[L_Center_Point[1] + 3][L_Center_Point[0] + 2] - image[L_Center_Point[1] + 3][L_Center_Point[0] + 1]
+                                                              - image[L_Center_Point[1] + 3][L_Center_Point[0] + 0] - image[L_Center_Point[1] + 3][L_Center_Point[0] - 1]
+                                                              - image[L_Center_Point[1] + 3][L_Center_Point[0] - 2]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] + 2] + image[L_Center_Point[1] - 2][L_Center_Point[0] + 1]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] + 0] + image[L_Center_Point[1] - 2][L_Center_Point[0] - 1]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] - 2];
+                        break;
+                    }
+                    case -2:
+                    {
+                        L_Pixel_Value_Sum = L_Pixel_Value_Sum - image[L_Center_Point[1] - 1][L_Center_Point[0] + 3] - image[L_Center_Point[1] - 0][L_Center_Point[0] + 3]
+                                                              - image[L_Center_Point[1] + 1][L_Center_Point[0] + 3] - image[L_Center_Point[1] + 2][L_Center_Point[0] + 3]
+                                                              - image[L_Center_Point[1] + 3][L_Center_Point[0] + 3] - image[L_Center_Point[1] + 3][L_Center_Point[0] + 2]
+                                                              - image[L_Center_Point[1] + 3][L_Center_Point[0] + 1] - image[L_Center_Point[1] + 3][L_Center_Point[0] - 0]
+                                                              - image[L_Center_Point[1] + 3][L_Center_Point[0] - 1]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] - 2] + image[L_Center_Point[1] + 1][L_Center_Point[0] - 2]
+                                                              + image[L_Center_Point[1] + 0][L_Center_Point[0] - 2] + image[L_Center_Point[1] - 1][L_Center_Point[0] - 2]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] - 2] + image[L_Center_Point[1] - 2][L_Center_Point[0] - 1]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] - 0] + image[L_Center_Point[1] - 2][L_Center_Point[0] + 1]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] + 2];
+                        break;
+                    }
+                    case -3:
+                    {
+                        L_Pixel_Value_Sum = L_Pixel_Value_Sum - image[L_Center_Point[1] - 2][L_Center_Point[0] + 3] - image[L_Center_Point[1] - 1][L_Center_Point[0] + 3]
+                                                              - image[L_Center_Point[1] + 0][L_Center_Point[0] + 3] - image[L_Center_Point[1] + 1][L_Center_Point[0] + 3]
+                                                              - image[L_Center_Point[1] + 2][L_Center_Point[0] + 3]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] - 2] + image[L_Center_Point[1] - 1][L_Center_Point[0] - 2]
+                                                              + image[L_Center_Point[1] - 0][L_Center_Point[0] - 2] + image[L_Center_Point[1] + 1][L_Center_Point[0] - 2]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] - 2];
+                        break;
+                    }
+                    case -4:
+                    {
+                        L_Pixel_Value_Sum = L_Pixel_Value_Sum - image[L_Center_Point[1] - 3][L_Center_Point[0] - 1] - image[L_Center_Point[1] - 3][L_Center_Point[0] + 0]
+                                                              - image[L_Center_Point[1] - 3][L_Center_Point[0] + 1] - image[L_Center_Point[1] - 3][L_Center_Point[0] + 2]
+                                                              - image[L_Center_Point[1] - 3][L_Center_Point[0] + 3] - image[L_Center_Point[1] - 2][L_Center_Point[0] + 3]
+                                                              - image[L_Center_Point[1] - 1][L_Center_Point[0] + 3] - image[L_Center_Point[1] + 0][L_Center_Point[0] + 3]
+                                                              - image[L_Center_Point[1] + 1][L_Center_Point[0] + 3]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] - 2] + image[L_Center_Point[1] - 1][L_Center_Point[0] - 2]
+                                                              + image[L_Center_Point[1] + 0][L_Center_Point[0] - 2] + image[L_Center_Point[1] + 1][L_Center_Point[0] - 2]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] - 2] + image[L_Center_Point[1] + 2][L_Center_Point[0] - 1]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] - 0] + image[L_Center_Point[1] + 2][L_Center_Point[0] + 1]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] + 2];
+                        break;
+                    }
+                    case -1:
+                    {
+                        L_Pixel_Value_Sum = L_Pixel_Value_Sum - image[L_Center_Point[1] - 3][L_Center_Point[0] - 2] - image[L_Center_Point[1] - 3][L_Center_Point[0] - 1]
+                                                              - image[L_Center_Point[1] - 3][L_Center_Point[0] + 0] - image[L_Center_Point[1] - 3][L_Center_Point[0] + 1]
+                                                              - image[L_Center_Point[1] - 3][L_Center_Point[0] + 2]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] - 2] + image[L_Center_Point[1] + 2][L_Center_Point[0] - 1]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] + 0] + image[L_Center_Point[1] + 2][L_Center_Point[0] + 1]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] + 2];
+                        break;
+                    }
+                    case 2:
+                    {
+                        L_Pixel_Value_Sum = L_Pixel_Value_Sum - image[L_Center_Point[1] + 1][L_Center_Point[0] - 3] - image[L_Center_Point[1] + 0][L_Center_Point[0] - 3]
+                                                              - image[L_Center_Point[1] - 1][L_Center_Point[0] - 3] - image[L_Center_Point[1] - 2][L_Center_Point[0] - 3]
+                                                              - image[L_Center_Point[1] - 3][L_Center_Point[0] - 3] - image[L_Center_Point[1] - 3][L_Center_Point[0] - 2]
+                                                              - image[L_Center_Point[1] - 3][L_Center_Point[0] - 1] - image[L_Center_Point[1] - 3][L_Center_Point[0] + 0]
+                                                              - image[L_Center_Point[1] - 3][L_Center_Point[0] + 1]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] + 2] + image[L_Center_Point[1] - 1][L_Center_Point[0] + 2]
+                                                              + image[L_Center_Point[1] - 0][L_Center_Point[0] + 2] + image[L_Center_Point[1] + 1][L_Center_Point[0] + 2]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] + 2] + image[L_Center_Point[1] + 2][L_Center_Point[0] + 1]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] + 0] + image[L_Center_Point[1] + 2][L_Center_Point[0] - 1]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] - 2];
+                        break;
+                    }
+                    case 3:
+                    {
+                        L_Pixel_Value_Sum = L_Pixel_Value_Sum - image[L_Center_Point[1] + 2][L_Center_Point[0] - 3] - image[L_Center_Point[1] + 1][L_Center_Point[0] - 3]
+                                                              - image[L_Center_Point[1] - 0][L_Center_Point[0] - 3] - image[L_Center_Point[1] - 1][L_Center_Point[0] - 3]
+                                                              - image[L_Center_Point[1] - 2][L_Center_Point[0] - 3]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] + 2] + image[L_Center_Point[1] + 1][L_Center_Point[0] + 2]
+                                                              + image[L_Center_Point[1] + 0][L_Center_Point[0] + 2] + image[L_Center_Point[1] - 1][L_Center_Point[0] + 2]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] + 2];
+                        break;
+                    }
+                    case 4:
+                    {
+                        L_Pixel_Value_Sum = L_Pixel_Value_Sum - image[L_Center_Point[1] + 3][L_Center_Point[0] + 1] - image[L_Center_Point[1] + 3][L_Center_Point[0] - 0]
+                                                              - image[L_Center_Point[1] + 3][L_Center_Point[0] - 1] - image[L_Center_Point[1] + 3][L_Center_Point[0] - 2]
+                                                              - image[L_Center_Point[1] + 3][L_Center_Point[0] - 3] - image[L_Center_Point[1] + 2][L_Center_Point[0] - 3]
+                                                              - image[L_Center_Point[1] + 1][L_Center_Point[0] - 3] - image[L_Center_Point[1] - 0][L_Center_Point[0] - 3]
+                                                              - image[L_Center_Point[1] - 1][L_Center_Point[0] - 3]
+                                                              + image[L_Center_Point[1] + 2][L_Center_Point[0] + 2] + image[L_Center_Point[1] + 1][L_Center_Point[0] + 2]
+                                                              + image[L_Center_Point[1] - 0][L_Center_Point[0] + 2] + image[L_Center_Point[1] - 1][L_Center_Point[0] + 2]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] + 2] + image[L_Center_Point[1] - 2][L_Center_Point[0] + 1]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] + 0] + image[L_Center_Point[1] - 2][L_Center_Point[0] - 1]
+                                                              + image[L_Center_Point[1] - 2][L_Center_Point[0] - 2];
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                for (j = 0; j < 25; j++)    //µÚÒ»¸öãĞÖµ½«25¸öµãÈ«²¿¼ÓÒ»±é£¬ºóĞøµãµÄãĞÖµ¸ù¾İÉú³¤·½Ïò¼ÆËã
+                {
+                    L_Pixel_Value_Sum += image[L_Center_Point[1] + Square_0[j][1]][L_Center_Point[0] + Square_0[j][0]];
+                }
+            }
+ 
+            L_Thres = (L_Pixel_Value_Sum + Thres_Interfere) / Thres_Num_Interfere;   //ãĞÖµÎª25¸öµã»Ò¶ÈÖµµÄÆ½¾ùÖµ
+//            L_Thres -= clip_value;              //½«µÃµ½µÄ»Ò¶ÈãĞÖµ¼õÈ¥Ò»¸ö¾­ÑéÖµ£¬ÓÃÀ´ÓÅ»¯ÅĞ¶¨
+ 
+            //ÕâÀïÎª·´ÏòÆ½»¬ÂË²¨£¨²»ÖªÍøÉÏÊÇ·ñÓĞÕâÖÖËã·¨£¬´Ë´¦Îª±¾ÈËÔ­´´£©£¬ÓÃÓÚÊÊÓ¦ÓÉ½Ï°µµ½£¨¾Ö²¿£©¸ßÁÁÇøÓò£¬»ò·´Ö®µÄ¹âÏßÇé¿ö¡£ºóĞøÏêÏ¸½²½âÔ­Àí
+//            if(Thres_Filiter_Flag_1 == 1 || Thres_Filiter_Flag_2 == 1)
+//            {
+                if(L_Data_Statics > 3)
+                {
+                    L_Thres = L_Thres * 1.3f - L_Thres_Record[L_Data_Statics - 1] * 0.2f - L_Thres_Record[L_Data_Statics - 2] * 0.1f;
+                }
+//            }
+            L_Thres_Record[L_Data_Statics] = (uint8_t)L_Thres;
+            L_Data_Statics++;                   //Ã¿ÕÒµ½Ò»¸öµãÍ³¼Æ¸öÊı+1
+ 
+            L_Judge_Again:    //L_Judge_Again Óë goto ÅäºÏÊ¹ÓÃ
+            if(L_Stop_Flag == 0)
+            {
+                L_Front_Value = image[L_Center_Point[1] + L_Face_Dir[L_Dir][1]][L_Center_Point[0] + L_Face_Dir[L_Dir][0]];          //¼ÇÂ¼ÃæÏòµÄÇ°·½µãµÄ»Ò¶ÈÖµ
+                L_Front_L_Value = image[L_Center_Point[1] + L_Face_Dir_L[L_Dir][1]][L_Center_Point[0] + L_Face_Dir_L[L_Dir][0]];    //¼ÇÂ¼ÃæÏòµÄ×óÇ°·½µãµÄ»Ò¶ÈÖµ
+                if((float)L_Front_Value < L_Thres)     //ÃæÏòµÄÇ°·½µãÊÇºÚÉ«
+                {
+                    L_Dir = (L_Dir + 1) % 4;    //ĞèÓÒ×ªÒ»´Î
+                    L_Turn_Num ++;
+                    if(L_Turn_Num == 4)        //ËÀÇø´¦Àí
+                    {
+                        L_Stop_Flag = 1;       //µ±Ç°ºó×óÓÒ¶¼ÊÇºÚÉ«Ê±£¬½øÈëËÀÇø£¬Í£Ö¹×ó²àÅÀÏß
+                    }
+                    goto L_Judge_Again;
+                }
+                else if((float)L_Front_L_Value < L_Thres)   //×óÇ°·½µãÊÇºÚÉ«£¬Ç°·½µãÊÇ°×É«
+                {
+                    L_Center_Point[0] += L_Face_Dir[L_Dir][0];
+                    L_Center_Point[1] += L_Face_Dir[L_Dir][1];      //ÏòÇ°×ßÒ»²½
+                    l_dir[L_Data_Statics - 1] = (L_Face_Dir[L_Dir][0] * 3) - L_Face_Dir[L_Dir][1];
+                    L_Turn_Num = 0;
+                }
+                else        //×óÇ°·½ºÍÇ°·½¶¼ÊÇ°×É«µã
+                {
+                    L_Center_Point[0] += L_Face_Dir_L[L_Dir][0];
+                    L_Center_Point[1] += L_Face_Dir_L[L_Dir][1];        //Ïò×óÇ°·½×ßÒ»²½
+                    l_dir[L_Data_Statics - 1] = (L_Face_Dir_L[L_Dir][0] * 3) - L_Face_Dir_L[L_Dir][1];
+                    L_Dir = (L_Dir + 3) % 4;        //×ó×ªÒ»´Î
+                    L_Turn_Num = 0;
+                }
+                if(L_Data_Statics >= 5)     //O»·´¦Àí£¬¼´×ªÁËÒ»È¦ºó»Øµ½Ô­´¦£¬Ò²ÊÇÒ»ÖÖËÀÇø£¬µ±Á¢¼´Í£Ö¹ÅÀÏß
+                {
+                    if(l_line[L_Data_Statics - 1][0] == l_line[L_Data_Statics - 5][0]&&
+                       l_line[L_Data_Statics - 1][1] == l_line[L_Data_Statics - 5][1])
+                    {
+                        L_Stop_Flag = 1;
+                    }
+                }
+            }
+            if(L_Center_Point[0]<1) L_Center_Point[0]=1;
+            if(L_Center_Point[0]>92) L_Center_Point[0]=92;
+            if(L_Center_Point[1]<1) L_Center_Point[1]=1;
+            if(L_Center_Point[1]>58) L_Center_Point[1]=58;
+        }
+ 
+        //ÓÒ²àÓë×ó²àÍ¬Àí£¬´úÂëÒ²ÀàËÆ£¬Àí½â×ó²àºóÓÒ²à¾ÍºÜ¼òµ¥
+        if(R_Stop_Flag == 0)
+        {
+            r_line[R_Data_Statics][0] = R_Center_Point[0];
+            r_line[R_Data_Statics][1] = R_Center_Point[1];
+ 
+            if(R_Data_Statics != 0)
+            {
+                switch(r_dir[R_Data_Statics - 1])
+                {
+                    case 1:
+                    {
+                        R_Pixel_Value_Sum = R_Pixel_Value_Sum - image[R_Center_Point[1] + 3][R_Center_Point[0] + 2] - image[R_Center_Point[1] + 3][R_Center_Point[0] + 1]
+                                                              - image[R_Center_Point[1] + 3][R_Center_Point[0] + 0] - image[R_Center_Point[1] + 3][R_Center_Point[0] - 1]
+                                                              - image[R_Center_Point[1] + 3][R_Center_Point[0] - 2]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] + 2] + image[R_Center_Point[1] - 2][R_Center_Point[0] + 1]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] + 0] + image[R_Center_Point[1] - 2][R_Center_Point[0] - 1]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] - 2];
+                        break;
+                    }
+                    case -2:
+                    {
+                        R_Pixel_Value_Sum = R_Pixel_Value_Sum - image[R_Center_Point[1] - 1][R_Center_Point[0] + 3] - image[R_Center_Point[1] - 0][R_Center_Point[0] + 3]
+                                                              - image[R_Center_Point[1] + 1][R_Center_Point[0] + 3] - image[R_Center_Point[1] + 2][R_Center_Point[0] + 3]
+                                                              - image[R_Center_Point[1] + 3][R_Center_Point[0] + 3] - image[R_Center_Point[1] + 3][R_Center_Point[0] + 2]
+                                                              - image[R_Center_Point[1] + 3][R_Center_Point[0] + 1] - image[R_Center_Point[1] + 3][R_Center_Point[0] - 0]
+                                                              - image[R_Center_Point[1] + 3][R_Center_Point[0] - 1]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] - 2] + image[R_Center_Point[1] + 1][R_Center_Point[0] - 2]
+                                                              + image[R_Center_Point[1] + 0][R_Center_Point[0] - 2] + image[R_Center_Point[1] - 1][R_Center_Point[0] - 2]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] - 2] + image[R_Center_Point[1] - 2][R_Center_Point[0] - 1]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] - 0] + image[R_Center_Point[1] - 2][R_Center_Point[0] + 1]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] + 2];
+                        break;
+                    }
+                    case -3:
+                    {
+                        R_Pixel_Value_Sum = R_Pixel_Value_Sum - image[R_Center_Point[1] - 2][R_Center_Point[0] + 3] - image[R_Center_Point[1] - 1][R_Center_Point[0] + 3]
+                                                              - image[R_Center_Point[1] + 0][R_Center_Point[0] + 3] - image[R_Center_Point[1] + 1][R_Center_Point[0] + 3]
+                                                              - image[R_Center_Point[1] + 2][R_Center_Point[0] + 3]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] - 2] + image[R_Center_Point[1] - 1][R_Center_Point[0] - 2]
+                                                              + image[R_Center_Point[1] - 0][R_Center_Point[0] - 2] + image[R_Center_Point[1] + 1][R_Center_Point[0] - 2]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] - 2];
+                        break;
+                    }
+                    case -4:
+                    {
+                        R_Pixel_Value_Sum = R_Pixel_Value_Sum - image[R_Center_Point[1] - 3][R_Center_Point[0] - 1] - image[R_Center_Point[1] - 3][R_Center_Point[0] + 0]
+                                                              - image[R_Center_Point[1] - 3][R_Center_Point[0] + 1] - image[R_Center_Point[1] - 3][R_Center_Point[0] + 2]
+                                                              - image[R_Center_Point[1] - 3][R_Center_Point[0] + 3] - image[R_Center_Point[1] - 2][R_Center_Point[0] + 3]
+                                                              - image[R_Center_Point[1] - 1][R_Center_Point[0] + 3] - image[R_Center_Point[1] + 0][R_Center_Point[0] + 3]
+                                                              - image[R_Center_Point[1] + 1][R_Center_Point[0] + 3]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] - 2] + image[R_Center_Point[1] - 1][R_Center_Point[0] - 2]
+                                                              + image[R_Center_Point[1] + 0][R_Center_Point[0] - 2] + image[R_Center_Point[1] + 1][R_Center_Point[0] - 2]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] - 2] + image[R_Center_Point[1] + 2][R_Center_Point[0] - 1]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] - 0] + image[R_Center_Point[1] + 2][R_Center_Point[0] + 1]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] + 2];
+                        break;
+                    }
+                    case -1:
+                    {
+                        R_Pixel_Value_Sum = R_Pixel_Value_Sum - image[R_Center_Point[1] - 3][R_Center_Point[0] - 2] - image[R_Center_Point[1] - 3][R_Center_Point[0] - 1]
+                                                              - image[R_Center_Point[1] - 3][R_Center_Point[0] + 0] - image[R_Center_Point[1] - 3][R_Center_Point[0] + 1]
+                                                              - image[R_Center_Point[1] - 3][R_Center_Point[0] + 2]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] - 2] + image[R_Center_Point[1] + 2][R_Center_Point[0] - 1]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] + 0] + image[R_Center_Point[1] + 2][R_Center_Point[0] + 1]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] + 2];
+                        break;
+                    }
+                    case 2:
+                    {
+                        R_Pixel_Value_Sum = R_Pixel_Value_Sum - image[R_Center_Point[1] + 1][R_Center_Point[0] - 3] - image[R_Center_Point[1] + 0][R_Center_Point[0] - 3]
+                                                              - image[R_Center_Point[1] - 1][R_Center_Point[0] - 3] - image[R_Center_Point[1] - 2][R_Center_Point[0] - 3]
+                                                              - image[R_Center_Point[1] - 3][R_Center_Point[0] - 3] - image[R_Center_Point[1] - 3][R_Center_Point[0] - 2]
+                                                              - image[R_Center_Point[1] - 3][R_Center_Point[0] - 1] - image[R_Center_Point[1] - 3][R_Center_Point[0] + 0]
+                                                              - image[R_Center_Point[1] - 3][R_Center_Point[0] + 1]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] + 2] + image[R_Center_Point[1] - 1][R_Center_Point[0] + 2]
+                                                              + image[R_Center_Point[1] - 0][R_Center_Point[0] + 2] + image[R_Center_Point[1] + 1][R_Center_Point[0] + 2]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] + 2] + image[R_Center_Point[1] + 2][R_Center_Point[0] + 1]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] + 0] + image[R_Center_Point[1] + 2][R_Center_Point[0] - 1]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] - 2];
+                        break;
+                    }
+                    case 3:
+                    {
+                        R_Pixel_Value_Sum = R_Pixel_Value_Sum - image[R_Center_Point[1] + 2][R_Center_Point[0] - 3] - image[R_Center_Point[1] + 1][R_Center_Point[0] - 3]
+                                                              - image[R_Center_Point[1] - 0][R_Center_Point[0] - 3] - image[R_Center_Point[1] - 1][R_Center_Point[0] - 3]
+                                                              - image[R_Center_Point[1] - 2][R_Center_Point[0] - 3]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] + 2] + image[R_Center_Point[1] + 1][R_Center_Point[0] + 2]
+                                                              + image[R_Center_Point[1] + 0][R_Center_Point[0] + 2] + image[R_Center_Point[1] - 1][R_Center_Point[0] + 2]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] + 2];
+                        break;
+                    }
+                    case 4:
+                    {
+                        R_Pixel_Value_Sum = R_Pixel_Value_Sum - image[R_Center_Point[1] + 3][R_Center_Point[0] + 1] - image[R_Center_Point[1] + 3][R_Center_Point[0] - 0]
+                                                              - image[R_Center_Point[1] + 3][R_Center_Point[0] - 1] - image[R_Center_Point[1] + 3][R_Center_Point[0] - 2]
+                                                              - image[R_Center_Point[1] + 3][R_Center_Point[0] - 3] - image[R_Center_Point[1] + 2][R_Center_Point[0] - 3]
+                                                              - image[R_Center_Point[1] + 1][R_Center_Point[0] - 3] - image[R_Center_Point[1] - 0][R_Center_Point[0] - 3]
+                                                              - image[R_Center_Point[1] - 1][R_Center_Point[0] - 3]
+                                                              + image[R_Center_Point[1] + 2][R_Center_Point[0] + 2] + image[R_Center_Point[1] + 1][R_Center_Point[0] + 2]
+                                                              + image[R_Center_Point[1] - 0][R_Center_Point[0] + 2] + image[R_Center_Point[1] - 1][R_Center_Point[0] + 2]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] + 2] + image[R_Center_Point[1] - 2][R_Center_Point[0] + 1]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] + 0] + image[R_Center_Point[1] - 2][R_Center_Point[0] - 1]
+                                                              + image[R_Center_Point[1] - 2][R_Center_Point[0] - 2];
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                for (j = 0; j < 25; j++)
+                {
+                    R_Pixel_Value_Sum += image[R_Center_Point[1] + Square_0[j][1]][R_Center_Point[0] + Square_0[j][0]];
+                }
+            }
+ 
+            R_Thres = (R_Pixel_Value_Sum + Thres_Interfere) / Thres_Num_Interfere;
+//            R_Thres -= clip_value;
+ 
+//            if(Thres_Filiter_Flag_1 == 1 || Thres_Filiter_Flag_2 == 1)
+//            {
+                if(R_Data_Statics > 3)
+                {
+                    R_Thres = R_Thres * 1.3f - R_Thres_Record[R_Data_Statics - 1] * 0.2f - R_Thres_Record[R_Data_Statics - 2] * 0.1f;
+                }
+//            }
+ 
+            R_Thres_Record[R_Data_Statics] = (uint8_t)R_Thres;
+ 
+            R_Data_Statics++;
+ 
+            R_Judgme_Again:
+            if(R_Stop_Flag == 0)
+            {
+                R_Front_Value = image[R_Center_Point[1] + R_Face_Dir[R_Dir][1]][R_Center_Point[0] + R_Face_Dir[R_Dir][0]];
+                R_Front_R_Value = image[R_Center_Point[1] + R_Face_Dir_R[R_Dir][1]][R_Center_Point[0] + R_Face_Dir_R[R_Dir][0]];
+                if((float)R_Front_Value < R_Thres)
+                {
+                    R_Dir = (R_Dir + 3) % 4;
+                    R_Turn_Num ++;
+                    if(R_Turn_Num == 4)
+                    {
+                        R_Stop_Flag = 1;
+                    }
+                    goto R_Judgme_Again;
+                }
+                else if((float)R_Front_R_Value < R_Thres)
+                {
+                    R_Center_Point[0] += R_Face_Dir[R_Dir][0];
+                    R_Center_Point[1] += R_Face_Dir[R_Dir][1];
+                    r_dir[R_Data_Statics - 1] = R_Face_Dir[R_Dir][0] * 3 - R_Face_Dir[R_Dir][1];
+                    R_Turn_Num = 0;
+                }
+                else
+                {
+                    R_Center_Point[0] += R_Face_Dir_R[R_Dir][0];
+                    R_Center_Point[1] += R_Face_Dir_R[R_Dir][1];
+                    r_dir[R_Data_Statics - 1] = R_Face_Dir_R[R_Dir][0] * 3 - R_Face_Dir_R[R_Dir][1];
+                    R_Dir = (R_Dir + 1) % 4;
+                    R_Turn_Num = 0;
+                }
+                if(R_Data_Statics >= 5)
+                {
+                    if(r_line[R_Data_Statics - 1][0] == r_line[R_Data_Statics - 5][0]&&
+                       r_line[R_Data_Statics - 1][1] == r_line[R_Data_Statics - 5][1])
+                    {
+                        R_Stop_Flag = 1;
+                    }
+                }
+            }
+            if(R_Center_Point[0]<1) R_Center_Point[0]=1;
+            if(R_Center_Point[0]>92) R_Center_Point[0]=92;
+            if(R_Center_Point[1]<1) R_Center_Point[1]=1;
+            if(R_Center_Point[1]>58) R_Center_Point[1]=58;
+        }
+ 
+        if(L_Stop_Flag == 0 && R_Stop_Flag == 0)
+        {
+            if ((My_ABS(r_line[R_Data_Statics - 1][0] - l_line[L_Data_Statics - 1][0]) <= 1)
+                && (My_ABS(r_line[R_Data_Statics - 1][1] - l_line[L_Data_Statics - 1][1]) <= 1))        //Á½²àÅÀÏßÏàÓö£¬ÍË³öÑ­»·£¬Ò»ÕÅÍ¼ÏñÅÀÏß½áÊø
+            {
+                *y_meet = (r_line[R_Data_Statics - 1][1] + l_line[L_Data_Statics - 1][1]) >> 1;  //¼ÇÂ¼ÏàÓöµãY
+                *x_meet = (r_line[R_Data_Statics - 1][0] + l_line[L_Data_Statics - 1][0]) >> 1;  //¼ÇÂ¼ÏàÓöµãX
+                break;
+            }
+        }
+        //ÓĞÒ»²à´æÔÚËÀÇøÊ±£¬¶ÔÏàÓöµãµÄÅĞ¶¨·Å¿íËÉÒ»Ğ©£¬·ÀÖ¹Êµ¼ÊÏàÓöµ«Ã»ÓĞÅĞ¶¨³ö£¬µ¼ÖÂÅÀÏßÎÉÂÒµÄÇé¿ö
+        else
+        {
+            if ((My_ABS(r_line[R_Data_Statics - 1][0] - l_line[L_Data_Statics - 1][0]) <= 3)
+                && (My_ABS(r_line[R_Data_Statics - 1][1] - l_line[L_Data_Statics - 1][1]) <= 3))        //Á½²àÅÀÏßÏàÓö£¬ÍË³öÑ­»·£¬Ò»ÕÅÍ¼ÏñÅÀÏß½áÊø
+            {
+                *y_meet = (r_line[R_Data_Statics - 1][1] + l_line[L_Data_Statics - 1][1]) >> 1;  //¼ÇÂ¼ÏàÓöµãY
+                *x_meet = (r_line[R_Data_Statics - 1][0] + l_line[L_Data_Statics - 1][0]) >> 1;  //¼ÇÂ¼ÏàÓöµãX
+                break;
+            }
+        }
+    }
+    L_Stop_Flag = 0;
+    R_Stop_Flag = 0;
+    *l_stastic = L_Data_Statics;    //¼ÇÂ¼×ó²à±ßÏßµã¸öÊı
+    *r_stastic = R_Data_Statics;    //¼ÇÂ¼ÓÒ²à±ßÏßµã¸öÊı
+}
+
+/**
+* º¯Êı¹¦ÄÜ£º      ÓÉ¶şÎ¬±ßÏßÊı×éÌáÈ¡Ò»Î¬±ßÏß
+* ÌØÊâËµÃ÷£º      ÎŞ
+* ĞÎ  ²Î£º        uint16 l_total       //×ó²à¶şÎ¬±ßÏßµãµÄ¸öÊı
+*                 uint16 r_total      //ÓÒ²à¶şÎ¬±ßÏßµãµÄ¸öÊı
+*                 uint8 start         //ÆğÊ¼ĞĞ£¨Í¼Ïñµ×²¿£©
+*                 uint8 end           //½ØÖ¹ĞĞ£¨Í¼Ïñ¶¥²¿£©
+*                 uint8 *l_border     //´æ´¢×ó²àÒ»Î¬±ßÏßµÄÊı×é
+*                 uint8 *r_border     //´æ´¢ÓÒ²àÒ»Î¬±ßÏßµÄÊı×é
+*                 uint8(*l_line)[2]   //´æ´¢×ó²à¶şÎ¬±ßÏßµÄÊı×é
+*                 uint8(*r_line)[2]   //´æ´¢ÓÒ²à¶şÎ¬±ßÏßµÄÊı×é
+*
+* Ê¾Àı£º          Get_Border(L_Statics, R_Statics, Image_Y - 3, 2, L_Border, R_Border, L_Line, R_Line);
+* ·µ»ØÖµ£º        ÎŞ
+*/
+void Get_Border(uint16 l_total, uint16 r_total, uint8 start, uint8 end, uint8 *l_border, uint8 *r_border, uint8(*l_line)[2], uint8(*r_line)[2])
+{
+    uint8 i = 0;
+    uint16 j = 0;
+    uint8 h = 0;
+    for (i = 0; i < LCDH - 1; i++)
+    {
+        l_border[i] = 1;
+        r_border[i] = LCDW - 2;     //ÓÒ±ßÏß³õÊ¼»¯·Åµ½×îÓÒ±ß£¬×ó±ßÏß·Åµ½×î×ó±ß£¬ÕâÑù±ÕºÏÇøÓòÍâµÄÖĞÏß¾Í»áÔÚÖĞ¼ä£¬²»»á¸ÉÈÅµÃµ½µÄÊı¾İ
+    }
+    h = start;
+    //ÓÒ±ß
+    for (j = 0; j < r_total; j++)
+    {
+        if (r_line[j][1] == h)
+        {
+            r_border[h] = r_line[j][0];
+        }
+        else
+        {
+            continue;//Ã¿ĞĞÖ»È¡Ò»¸öµã£¬Ã»µ½ÏÂÒ»ĞĞ¾Í²»¼ÇÂ¼
+        }
+        h--;
+        if (h == end)
+        {
+            break;//µ½×îºóÒ»ĞĞÍË³ö
+        }
+    }
+    h = start;
+    for (j = 0; j < l_total; j++)
+    {
+        if (l_line[j][1] == h)
+        {
+            l_border[h] = l_line[j][0];
+        }
+        else
+        {
+            continue;//Ã¿ĞĞÖ»È¡Ò»¸öµã£¬Ã»µ½ÏÂÒ»ĞĞ¾Í²»¼ÇÂ¼
+        }
+        h--;
+        if (h == end)
+        {
+            break;//µ½×îºóÒ»ĞĞÍË³ö
+        }
+    }
+}
+
+/**
+* º¯Êı¹¦ÄÜ£º      ÌáÈ¡ãĞÖµÖĞµÄ×î´ó×îĞ¡Öµ,²¢Çó³öãĞÖµ¾ùÖµ
+* ÌØÊâËµÃ÷£º      ¼ÆËãÊ±¼äĞ¡ÓÚ5us
+* ĞÎ  ²Î£º        ÎŞ
+*
+* Ê¾Àı£º          Thres_Record_Process£¨£©£»
+* ·µ»ØÖµ£º        ÎŞ
+*/
+void Thres_Record_Process(void)
+{
+    uint16_t i = 0;
+    uint8 Left_Temp_Value_1 = 0;
+    uint32 Left_Temp_Value_2 = 0;
+    uint8 Right_Temp_Value_1 = 0;
+    uint32 Right_Temp_Value_2 = 0;
+    uint8 L_Average_Thres = 0;
+    uint8 R_Average_Thres = 0;
+ 
+    Adaptive_L_Thres_Max = 0;
+    Adaptive_R_Thres_Max = 0;
+    Adaptive_L_Thres_Min = 0;
+    Adaptive_R_Thres_Min = 0;
+ 
+    Adaptive_L_Thres_Max = L_Thres_Record[0];
+    Adaptive_L_Thres_Min = L_Thres_Record[0];
+    Adaptive_R_Thres_Max = R_Thres_Record[0];
+    Adaptive_R_Thres_Min = R_Thres_Record[0];
+ 
+    for(i = 0; i < Adaptive_L_Statics; i += 2)      //¼ä¸ôÈ¡Öµ¼´¿É£¬¼õÉÙ¼ÆËãÁ¿
+    {
+        if(Adaptive_L_Line[i][0] != 2 && Adaptive_L_Line[i][1] != 2)      //ÉáÈ¥Î»ÓÚºÚ¿òÉÏµÄ±ßÏßµããĞÖµ£¬¡°2¡±¼´×ó±ßÏßÎ»ÓÚºÚ¿òÉÏÊ±µÄX×ø±ê
+        {
+            if(L_Thres_Record[i] < Adaptive_L_Thres_Min)
+            {
+                Adaptive_L_Thres_Min = L_Thres_Record[i];
+            }
+            if(L_Thres_Record[i] > Adaptive_L_Thres_Max)
+            {
+                Adaptive_L_Thres_Max = L_Thres_Record[i];
+            }
+            Left_Temp_Value_1 ++;
+            Left_Temp_Value_2 += L_Thres_Record[i];
+        }
+    }
+    for(i = 0; i < Adaptive_R_Statics; i += 2)
+    {
+        if(Adaptive_R_Line[i][0] != 91 && Adaptive_R_Line[i][1] != 2)       //Óë×ó²àÍ¬Àí
+        {
+            if(R_Thres_Record[i] < Adaptive_R_Thres_Min)
+            {
+                Adaptive_R_Thres_Min = R_Thres_Record[i];
+            }
+            if(R_Thres_Record[i] > Adaptive_R_Thres_Max)
+            {
+                Adaptive_R_Thres_Max = R_Thres_Record[i];
+            }
+            Right_Temp_Value_1 ++;
+            Right_Temp_Value_2 += R_Thres_Record[i];
+        }
+    }
+ 
+    if(Left_Temp_Value_1 == 0)      //µ±×ó²à±ßÏßÈ«²¿Î»ÓÚ±ß½çÉÏÊ±£¬Ö±½Ó½«ãĞÖµ¾ùÖµÈ¡0
+    {
+        L_Average_Thres = 0;
+    }
+    else        //Çó³ö×ó²àãĞÖµ¾ùÖµ
+    {
+        L_Average_Thres = (uint8)(Left_Temp_Value_2 / Left_Temp_Value_1);
+    }
+ 
+    if(Right_Temp_Value_1 == 0)     //Óë×ó²àÍ¬Àí
+    {
+        R_Average_Thres = 0;
+    }
+    else
+    {
+        R_Average_Thres = (uint8)(Right_Temp_Value_2 / Right_Temp_Value_1);
+    }
+ 
+    if(Image_Num <= 1)      //Ç°Á½ÕÅÍ¼ÏñÖ±½ÓÇó¾ùÖµ
+    {
+        Last_Adaptive_Thres_Average = (uint8)((L_Average_Thres + R_Average_Thres) / 2);
+    }
+    else
+    {
+        if(My_ABS(L_Average_Thres - R_Average_Thres) >= 40)       //µ±Á½²à±ßÏßµÄãĞÖµ¾ùÖµÏà²î¹ı´óÊ±£¬½øÒ»²½´¦Àí
+        {
+            if(My_ABS(L_Average_Thres - Last_Adaptive_Thres_Average) <= My_ABS(R_Average_Thres - Last_Adaptive_Thres_Average))      //Ñ¡È¡Á½²àãĞÖµ¾ùÖµ×î½Ó½üÉÏ´ÎÍ¼ÏñãĞÖµ¾ùÖµµÄÖµ×÷Îª´Ë´ÎµÄÖµ
+            {
+                Adaptive_Thres_Average = (uint8)((Last_Adaptive_Thres_Average + L_Average_Thres) / 2);
+                Last_Adaptive_Thres_Average = Adaptive_Thres_Average;
+            }
+            else
+            {
+                Adaptive_Thres_Average = (uint8)((Last_Adaptive_Thres_Average + R_Average_Thres) / 2);
+                Last_Adaptive_Thres_Average = Adaptive_Thres_Average;
+            }
+        }
+        else    //µ±Á½²àãĞÖµ¾ùÖµÏà²î²»´óÊ±£¬Ö±½ÓÇóÈıÕß¾ùÖµ
+        {
+            Adaptive_Thres_Average = (uint8)((Last_Adaptive_Thres_Average + L_Average_Thres + R_Average_Thres) / 3);
+            Last_Adaptive_Thres_Average = Adaptive_Thres_Average;
+        }
+    }
+ 
+    //»ñµÃÅĞ¶Ï°ßÂíÏßµÄãĞÖµ
+    //Zbra_Thres = Adaptive_Thres_Average - 10;
+ 
+    //»ñµÃÆğÊ¼µã²î±ÈºÍµÄãĞÖµ
+    if(Adaptive_Thres_Average >= 100 && Adaptive_Thres_Average <= 140)      //ãĞÖµ¾ùÖµÂäÔÚ100 - 140Ö®¼ä£¬ËµÃ÷Í¼ÏñÁÁ¶ÈºÜºÏÊÊ£¬´ËÊ±½«²î±ÈºÍãĞÖµÉèÎª20¼´¿É
+    {
+        Compare_Value = 20;
+    }
+    else if(Adaptive_Thres_Average < 100)
+    {
+        Compare_Value = 20 - (uint8)(((float)(100 - Adaptive_Thres_Average) / 60.0f) * 10.0f);      //µ±Ğ¡ÓÚ100Ê±£¬ÊÊµ±À­µÍ²î±ÈºÍãĞÖµ£¬Ê¹ÆäÔÚÍ¼Ïñ½Ï°µµÄÇé¿öÏÂ¸üÈİÒ×ÕÒ³öÈüµÀ±ßÏß
+    }
+    else if(Adaptive_Thres_Average > 140)
+    {
+        Compare_Value = 20 - (uint8)(((float)(Adaptive_Thres_Average - 140) / 60.0f) * 10.0f);      //µ±´óÓÚ140Ê±£¬ÊÊµ±À­µÍ²î±ÈºÍãĞÖµ£¬Ê¹ÆäÔÚÍ¼Ïñ½ÏÁÁµÄÇé¿öÏÂ¸üÈİÒ×ÕÒ³öÈüµÀ±ßÏß
+    }
+     Black_Box_Value_1=(record_gray_value[0]+record_gray_value[1])/2;
+    //ÇóºÚ¿ò»Ò¶ÈÖµ
+    Black_Box_Value = (uint8)(0.45f * (float)sqrt(Adaptive_L_Thres_Min * Adaptive_L_Thres_Min + Adaptive_R_Thres_Min * Adaptive_R_Thres_Min)) + (uint8)(0.1f * (float)Black_Box_Value_1);      
+    //0.45f¼´0.9 * 0.5£¬0.9ÎªÈ¨ÖØ£¬0.5¿É×Ô¼ºµ÷½Ú¡£Black_Box_Value_1ÎªÁ½²àÅÀÏßÆğµãµÄ»Ò¶ÈÖµ¾ùÖµ£¨ÆğµãÖµ»Ò¶ÈÖµÎªÍ¼ÏñÖĞÈüµÀºÚÏßµÄ»Ò¶ÈÖµ£¬²»¿ÉÎªºÚ¿ò»Ò¶ÈÖµ£¬¿ÉÒÔ×Ô¼ºĞ´Ëã·¨´¦ÀíÏÂ£©
+    //»òÕßBlack_Box_Value_1Ö±½Ó¶ª20 ~ 50Ö®¼äµÄÖµ¼´¿É
+    
+    
+    if(Image_Num<2)
+    {
+      Image_Num++;    
+    }
+}
+
 void  Element_Judge(void)
 {
-//     int16 right_angle_white_column, left_angle_white_column;//Ö±½Ç°×ÁĞÅĞ¶Ï±äÁ¿  
-     int16 top, bottom, left, right;
-     int16 row, column;
-     
-     top_junp_change_sign_num = 0;
-     bottom_junp_change_sign_num = 0;
-     left_junp_change_sign_num = 0;
-     right_junp_change_sign_num = 0;
-     
-    for (top = 10; top < 20 ; top++)//´Ó×óµ½ÓÒÉ¨¶¥²¿10-20ĞĞ
+    if(Adaptive_X_Meet > 65 && Adaptive_Y_Meet < 35 && Adaptive_L_Statics > 35 && Adaptive_R_Statics > 25 && (Adaptive_L_Statics - Adaptive_R_Statics) > 0)
     {
-        for (column = 0; column < LCDW - 1; column++)
-        {
-             if (image_01[top][column-1] != 0x00 && image_01[top][column] == 0x00&& image_01[top][column+1] == 0x00)//ºÚ°×°×
-             {
-                 top_junp_change_sign_num++;
-             }
-             if (image_01[top][column-1] == 0x00 && image_01[top][column] != 0x00&& image_01[top][column+1] != 0x00)//°×ºÚºÚ
-             {
-                 top_junp_change_sign_num++;
-             }
-        }
-    }
-   for (bottom = 54; bottom > 44 ; bottom--)//´Ó×óµ½ÓÒÉ¨µ×²¿45-55ĞĞ
-    {
-        for (column = 0; column < LCDW - 1; column++)
-        {
-             if (image_01[bottom][column-1] != 0x00 && image_01[bottom][column] == 0x00 && image_01[bottom][column+1] == 0x00)//ºÚ°×°×
-             {
-                 bottom_junp_change_sign_num++;
-             }
-             if (image_01[bottom][column-1] == 0x00 && image_01[bottom][column] != 0x00 && image_01[bottom][column+1] != 0x00)//°×ºÚºÚ
-             {
-                 bottom_junp_change_sign_num++;
-             }
-        }
-    }
-    for (left = 10; left < 20; left++)//´ÓÏÂµ½ÉÏÉ¨×ó±ßµÚ10-20ĞĞ
-    {
-        for (row = LCDH - 1; row > 0; row--)
-        {
-             if (image_01[row-1][left] != 0x00 && image_01[row][left] == 0x00 && image_01[row+1][left] == 0x00)//ºÚ°×°×
-             {
-               left_junp_change_sign_num++;
-             }
-             if (image_01[row-1][left] == 0x00 && image_01[row][left] != 0x00 && image_01[row+1][left] != 0x00)//°×ºÚºÚ
-             {
-               left_junp_change_sign_num++;
-             }
-        }
-    }   
-    for (right = 83; right > 73; right--)//´ÓÏÂµ½ÉÏÉ¨ÓÒ±ßµÚ74-84ĞĞ
-    {
-        for (row = LCDH - 1; row > 0; row--)
-        {
-             if (image_01[row-1][right] != 0x00 && image_01[row][right] == 0x00 && image_01[row+1][right] == 0x00)//ºÚ°×°×
-             {
-                 right_junp_change_sign_num++;
-             }
-             if (image_01[row-1][right] == 0x00 && image_01[row][right] != 0x00 && image_01[row+1][right] != 0x00)//°×ºÚºÚ
-             {
-                 right_junp_change_sign_num++;
-             }
-        }
-    }
-    if(top_junp_change_sign_num >= 12 && bottom_junp_change_sign_num >= 12 && left_junp_change_sign_num < 12 && right_junp_change_sign_num <  12 && longest_White_Column >= 50)//Ö±µÀ
-    {
-        road_type.straight = 1;
+         road_type.right_right_angle_bend = 1;
     }
     else
     {
-        road_type.straight = 0;
+         road_type.right_right_angle_bend = 0;
     }
-    if(top_junp_change_sign_num < 12 && bottom_junp_change_sign_num >= 12 && left_junp_change_sign_num < 12 && right_junp_change_sign_num >= 12 && longest_White_Column <= 45)//ÓÒÖ±½Ç
+    if(Adaptive_X_Meet < 23 && Adaptive_Y_Meet < 40 && Adaptive_L_Statics > 25 && Adaptive_R_Statics > 35 && (Adaptive_R_Statics - Adaptive_L_Statics) > 0)
     {
-        road_type.right_right_angle_bend = 1;
-    }
-    else
-    {
-        road_type.right_right_angle_bend = 0;
-    }
-    if(top_junp_change_sign_num < 12 && bottom_junp_change_sign_num >= 12 && left_junp_change_sign_num >= 12 && right_junp_change_sign_num < 12 && longest_White_Column <= 45)//×óÖ±½Ç
-    {
-        road_type.left_right_angle_bend = 1;
+         road_type.left_right_angle_bend = 1;
     }
     else
     {
-        road_type.left_right_angle_bend = 0;
+         road_type.left_right_angle_bend = 0;
     }
-    if(top_junp_change_sign_num >= 16 && bottom_junp_change_sign_num >= 16 && left_junp_change_sign_num >= 16 && right_junp_change_sign_num >= 16 && longest_White_Column >= 50)//Ê®×Ö
+//    if()
+//    {
+//       
+//    }
+}
+
+/*************************************************************************
+Í¼Ïñ×îºó×Ü´¦Àí
+*************************************************************************/
+void Camera_All_Deal(void)
+{
+    if(mt9v03x_finish_flag)
     {
-        road_type.ten = 1;
-    }
-    else
-    {
-        road_type.ten = 0;
+        mt9v03x_finish_flag = 0;
+        Get_Use_Image();
+        Draw_Black_Box(Black_Box_Value, Image_Use);
+        Get_Start_Point(LCDH - 3, Image_Use, Adaptive_L_Start_Point, Adaptive_R_Start_Point, 91);
+        Dir_Labyrinth_5(3.5 * LCDW, Image_Use, Adaptive_L_Line, Adaptive_R_Line, Adaptive_L_Grow_Dir, Adaptive_L_Grow_Dir, &Adaptive_L_Statics, &Adaptive_R_Statics, &Adaptive_X_Meet, &Adaptive_Y_Meet, Adaptive_L_Start_Point[0], Adaptive_L_Start_Point[1], Adaptive_R_Start_Point[0], Adaptive_R_Start_Point[1], 0);
+//        Get_Border(Adaptive_L_Statics, Adaptive_R_Statics, LCDH - 3, 2, L_Border, R_Border, Adaptive_L_Line, Adaptive_R_Line);
+        Thres_Record_Process();
+        tft180_displayimage03x((const uint8 *)Image_Use, 94, 60);
+        Element_Judge();
+        
     }
 }
